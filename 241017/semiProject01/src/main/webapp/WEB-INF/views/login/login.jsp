@@ -31,7 +31,7 @@
 
         /* 버튼 컨테이너: 버튼들을 세로로 배치 */
         .button-container {
-            width: 105%;
+            width: 108%;
             display: flex;
             
             flex-direction: column;
@@ -44,7 +44,7 @@
 
         /* 주소(p 태그) 가운데 정렬 */
         address p {
-            text-align: center;
+            text-align: left;
         }
     </style>
 </head>
@@ -55,7 +55,7 @@
     
     <!-- 로그인 폼 시작 -->
     <form action="${root}/login/process" method="post"> <!-- 로그인 처리를 위한 URL -->
-        <input type="text" name="ID" placeholder="사용자 아이디" required> <!-- 사용자 아이디 입력 필드 -->
+        <input type="text" name="ID" placeholder="e-mail" required> <!-- 사용자 아이디 입력 필드 -->
         <input type="password" name="password" placeholder="비밀번호" required> <!-- 비밀번호 입력 필드 -->
         
         <!-- 버튼 컨테이너: 로그인, 회원가입, 아이디/비밀번호 변경 버튼 -->
@@ -70,9 +70,10 @@
     <!-- 하단 정보 -->
     <p style="height: 150px;">&nbsp;</p> <!-- 간격을 위한 빈 공간 -->
     <address>
-        <p>사용자 아이디는 이메일 형식으로 작성 하십시오.</p> <!-- 사용자에게 아이디 작성 규칙 안내 -->
-        <p>비밀번호는 특수문자, 대.소문자 구분 8글자 이상으로 작성 하십시오.</p> <!-- 비밀번호 작성 규칙 안내 -->
-        <p>계정이 없으시면 회원가입을 하십시오.</p> <!-- 계정이 없을 경우 회원가입 안내 -->
+        <p> ID는 이메일 형식으로 작성 하십시오.</p> <!-- 사용자에게 아이디 작성 규칙 안내 -->
+        <p> 비밀번호는 특수문자, 대.소문자 구분 </p>
+        <p> 8글자 이상으로 작성 하십시오.</p> <!-- 비밀번호 작성 규칙 안내 -->
+        <p> 계정이 없으시면 회원가입을 하십시오.</p> <!-- 계정이 없을 경우 회원가입 안내 -->
     </address>
 
 </div>

@@ -92,7 +92,10 @@
         <label for="guests">인원수:</label>
         <input type="number" id="guests" name="guests" min="1" required>
 
+		<a href="searchResults" type="button">검색</a>
+		<!-- 
         <button type="submit">검색</button>
+		 -->
     </form>
 </div>
 
