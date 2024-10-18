@@ -224,7 +224,7 @@ INSERT INTO HotelAmenities (hotel_id, amenity_id) VALUES
 
 
 
-통합적으로 보는 쿼리문
+loc_id, amenities_id  문자 변환 쿼리문
 
 SELECT H.hotel_id, H.hotel_name, L.loc_name, H.star_rating, H.price_per_night, H.room_count, H.contact_number,
        GROUP_CONCAT(A.amenity_name SEPARATOR ', ') AS amenities
@@ -244,7 +244,16 @@ JOIN HotelAmenities HA ON H.hotel_id = HA.hotel_id
 JOIN Amenities A ON HA.amenity_id = A.amenity_id
 GROUP BY H.hotel_id;
 
-호텔 홈페이지,주소 ,이미지 url 
+최종통합 Hotels 쿼리문 
+
+SELECT H.hotel_id, H.hotel_name, L.loc_name, H.star_rating, H.price_per_night, H.room_count, H.contact_number,
+       H.address, GROUP_CONCAT(A.amenity_name SEPARATOR ', ') AS amenities, H.image_url, H.homepage_url
+FROM Hotels H
+JOIN HotelAmenities HA ON H.hotel_id = HA.hotel_id
+JOIN Amenities A ON HA.amenity_id = A.amenity_id
+JOIN Location L ON H.loc_id = L.loc_id
+GROUP BY H.hotel_id, H.hotel_name, L.loc_name, H.star_rating, H.price_per_night, H.room_count, H.contact_number, H.address, H.image_url, H.homepage_url;
+
 
 관광명소(테이블 따로)
 이름,특징,주소,홈페이지
