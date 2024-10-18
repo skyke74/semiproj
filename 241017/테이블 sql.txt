@@ -1,0 +1,52 @@
+테이블 sql
+
+
+--호텔 테이블
+CREATE TABLE Hotels (
+    hotel_id INT PRIMARY KEY AUTO_INCREMENT, -- 호텔 id
+    hotel_name VARCHAR(100) NOT NULL, -- 호텔 이름
+    loc_id INT NOT NULL, -- 지역 
+    star_rating INT CHECK (star_rating BETWEEN 1 AND 5), -- 호텔 성급
+    price_per_night INT NOT NULL, -- 1박 가격
+    room_count INT NOT NULL, -- 호텔 방 개수
+    contact_number VARCHAR(15), -- 호텔 전화 번호
+    homepage_url VARCHAR(255),  -- 호텔 홈페이지 URL
+    address VARCHAR(255),       -- 호텔 주소
+    image_url VARCHAR(255),     -- 호텔 이미지 URL
+    amenity_id INT
+);
+
+-- 어메니티 테이블
+CREATE TABLE Amenities (
+    amenity_id INT PRIMARY KEY AUTO_INCREMENT,
+    amenity_name VARCHAR(100) NOT NULL
+);
+
+
+--지역
+CREATE TABLE Location(
+	loc_id  INT PRIMARY KEY AUTO_INCREMENT,
+	loc_name VARCHAR(10) NOT NULL
+);
+
+
+--호텔 어메니티
+CREATE TABLE HotelAmenities (
+    hotel_id INT NOT NULL,
+    amenity_id INT NOT NULL,
+    FOREIGN KEY (hotel_id) REFERENCES Hotels(hotel_id),
+    FOREIGN KEY (amenity_id) REFERENCES Amenities(amenity_id),
+    PRIMARY KEY (hotel_id, amenity_id)
+);
+
+
+--관광명소
+CREATE TABLE TouristAttractions (
+    attraction_name VARCHAR(255),
+    loc_id INT,
+    features VARCHAR(255),
+    address VARCHAR(255),
+    homepage VARCHAR(255),
+    image_url VARCHAR(255)
+);
+
