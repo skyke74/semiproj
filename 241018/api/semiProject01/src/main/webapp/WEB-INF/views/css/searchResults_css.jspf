@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<style>
+    body {
+        font-family: Arial, sans-serif; /* 기본 글꼴 설정 */
+        line-height: 1.6;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+        gap: 20px; /* 섹션 사이 간격 추가 */
+    }
+
+    .section {
+        width: 100%;
+        border: 1px solid #000;
+        padding: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-description {
+        display: flex;
+        align-items: top;
+        margin-bottom: 30px;
+    }
+
+    .image-description img {
+        width: 48%; /* 이미지 크기 조정 */
+        height: auto;
+        margin-right: 20px; /* 텍스트와의 간격 */
+    }
+
+    .description-text {
+        flex-grow: 1; /* 텍스트 영역이 이미지 옆에서 확장되도록 */
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 1.2em;
+    }
+    p{
+    	font-size: 20px;
+    }
+    
+    .title-container {
+    display: flex;
+    align-items: center;
+}
+
+.title-container p {
+    margin-right: 50px;
+}
+
+</style>
