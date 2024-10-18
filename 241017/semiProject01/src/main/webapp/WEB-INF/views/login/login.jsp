@@ -60,8 +60,8 @@
         
         <!-- 버튼 컨테이너: 로그인, 회원가입, 아이디/비밀번호 변경 버튼 -->
         <div class="button-container">
-            <button type="submit">로그인</button> <!-- 로그인 버튼 -->
-            <button type="button" onclick="location.href='${root}/signup'">회원가입</button> <!-- 회원가입 페이지로 이동 버튼 -->
+            <button type="button" onclick="location.href='${root}/hotels/join' ">로그인</button> <!-- 로그인 버튼 -->
+            <button type="button" onclick="location.href='${root}/hotels/signup'">회원가입</button> <!-- 회원가입 페이지로 이동 버튼 -->
             <button type="button" onclick="location.href='${root}/change-id-password'">아이디/비밀번호 변경</button> <!-- 아이디/비밀번호 변경 페이지로 이동 버튼 -->
         </div>
     </form>

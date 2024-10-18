@@ -46,13 +46,17 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid"></div>
     <div class="navbar-header">
-        <div class="navbar-brand">IJ HOTEL</div>
+        <div class="navbar-brand">IJ HOTEL      
+          <span style="margin-left: 30px;">환영합니다!</span>
+        </div>
+        
     </div>
     <ul class="nav navbar-nav navbar-right custom-nav">
+    	
         <li><a class="text-uppercase" href="${root }/">home</a></li>
         <li><a class="text-uppercase" href="${root }/intro">관광명소</a></li>
         <li><a class="text-uppercase" href="${root }/emp">도움말</a></li>
-        <li><a class="text-uppercase" href="${root }/login/">로그인</a></li>
+        <li><a class="text-uppercase" href="${root }/logout/">로그아웃</a></li>
     </ul>
 </nav>
 <div class="container">

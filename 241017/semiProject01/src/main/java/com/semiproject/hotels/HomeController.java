@@ -24,10 +24,19 @@ public class HomeController {
 	public String searchResult(Locale locale, Model model) {
 		return "searchResults";
 	}
+	@RequestMapping(value = "/Results1", method = RequestMethod.GET)
+	public String Result1(Locale locale, Model model) {
+		return "Results1";
+	}
 	
 	@RequestMapping(value = "/login/", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
 		return "login/login";
+	}
+	
+	@RequestMapping(value = "/join/", method = RequestMethod.GET)
+	public String join(Locale locale, Model model) {
+		return "join/join";
 	}
 	
 	@RequestMapping(value = "/emp/", method = RequestMethod.GET)

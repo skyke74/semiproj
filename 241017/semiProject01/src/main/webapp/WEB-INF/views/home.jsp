@@ -65,6 +65,10 @@
     text-align: center;
     color: white;
   }
+  
+  label{
+  	font-size: 20px;
+  }
 </style>
 </head>
 <body>
@@ -72,7 +76,7 @@
 
 <p style="text-align: center;">숙소예약</p>
 
-<div class="jumbotron">
+<div class="jumbotron" style="background-color: white;">
     <form action="searchResults.jsp" method="get" style="text-align: center;">
         <label for="location">위치:</label>
         <!-- 드롭다운 메뉴로 변경: 광주, 제주, 서울, 부산 옵션 추가 -->
