@@ -1,4 +1,4 @@
-인서트만
+-- 인서트만
 
 INSERT INTO Location(loc_name)VALUES
 --1~4
@@ -8,35 +8,35 @@ INSERT INTO Location(loc_name)VALUES
 ('광주');
 
 INSERT INTO Hotels (hotel_name, loc_id, star_rating, standard_price, deluxe_price, premium_price, standard_r, deluxe_r, premium_r, contact_number, homepage_url, address, image_url) VALUES 
-('호텔 아트리움', 1, 3, 5000, 5000, 5000, 2, 2, 2, '02-767-9800', 'https://www.seanhotelgroup.com/hotels/atrium-jongno/ko', '서울특별시 종로구 창경궁로 106', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/395825319.jpg?k=ec6a238c2114d635115e504fde7d5c840082b0161eaee417854cbee151585d0c&o=&hp=1'),
-('한옥 호텔 담 서울', 1, 3, 5000, 5000, 5000, 2, 2, 2, '02-741-9906', 'https://hotels.naver.com/hotels/KYK1071519995?adultCnt=2&includeTax=false&checkIn=2024-10-25&checkOut=2024-10-26', '서울특별시 종로구 율곡로 6길', 'https://yaimg.yanolja.com/v5/2024/06/21/16/640/6675b13a723f68.67210886.jpg'),
-('라마다 호텔 앤 스위트 남대문', 1, 5, 5000, 5000, 5000, 2, 2, 2, '02-775-7177', 'https://www.seanhotelgroup.com/hotels/ramada-namdaemun/ko', '서울특별시 중구 칠패로 27', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/381738787.jpg?k=f85b131fb1e12cebeadbe2628d55d9269f1e9ae4d6b116416ab21bfbe0dd921e&o=&hp=1'),
-('엠디 호텔 독산', 1, 4, 5000, 5000, 5000, 2, 2, 2, '02-2096-4000', 'https://mdhoteldoksan.com/', '서울특별시 금천구 시흥대로 315', 'https://yaimg.yanolja.com/v5/2022/10/13/12/1280/6347ff3ef3d7c4.90975308.jpg'),
-('신라스테이 광화문 명동', 1, 4, 5000, 5000, 5000, 2, 2, 2, '02-6060-9000', 'https://m.shillastay.com/gwanghwamun/index.do?lang=ko', '서울특별시 종로구 삼봉로 71', 'https://q-xx.bstatic.com/xdata/images/hotel/max500/58182143.jpg?k=2c52d8f6be8bcf29638a430af16f079ef1a2bb00a2493e9ad88d5109d62a1971&o='),
-('파라스파라 서울', 1, 4, 5000, 5000, 5000, 2, 2, 2, '02-3408-5000', 'https://www.paraspara.co.kr/', '서울특별시 강북구 삼양로 689', 'https://yaimg.yanolja.com/v5/2022/10/12/17/640/6346f86871c386.50433780.png'),
-('호텔 안테룸 서울', 1, 3, 5000, 5000, 5000, 2, 2, 2, '02-542-2300', 'https://www.anteroom-seoul.com/', '서울특별시 강남구 도산대로 153', 'https://yaimg.yanolja.com/v5/2022/09/07/22/1280/63191727c6ea37.54109214.jpg'),
-('호텔 밀리오레 서울', 1, 3, 5000, 5000, 5000, 2, 2, 2, '02-6936-6000', 'https://www.migliorehotel.co.kr/homepage/KOR/index/index', '서울특별시 중구 퇴계로 115', 'https://q-xx.bstatic.com/xdata/images/hotel/max500/331473161.jpg?k=3507e4c5a08c8dd9dc3af23d0339ad75dc14c3e4432537120c54c073157eace4&o='),
-('덴바스타 호텔', 2, 4, 5000, 5000, 5000, 2, 2, 2, '051-819-5001', 'http://www.denbasta.com/', '부산광역시 북구 만덕고개길 72-3', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/550522723.jpg?k=729465b5d8c52a1e323ec5af8f7be1537f8f00b33f1ce8cbe4bb6dfb70374c5a&o=&hp=1'),
-('아벤트리 호텔 부산', 2, 3, 5000, 5000, 5000, 2, 2, 2, '051-260-5001', 'http://aventreebusan.itrocks.kr/', '부산광역시 중구 광복로39번길 6', 'https://yaimg.yanolja.com/v5/2022/04/25/15/1280/6266c35a8f5a21.30330994.jpg'),
-('코모도 호텔 부산', 2, 4, 5000, 5000, 5000, 2, 2, 2, '051-466-9101', 'https://www.commodore.co.kr/html/main/', '부산광역시 중구 중구로 151', 'https://www.commodore.co.kr/img/pop/sub02_img04_2_2.jpg'),
-('크라운 하버 호텔 부산', 2, 4, 5000, 5000, 5000, 2, 2, 2, '051-678-1000', 'https://www.crownharborhotel.com/html/main.asp', '부산광역시 중구 중앙대로 114', 'https://www.crownharborhotel.com/images/contents/sub_ac_03_01_img_1.jpg'),
-('부산 파크하얏트', 2, 5, 5000, 5000, 5000, 2, 2, 2, '051-990-1234', 'https://www.hyatt.com/ko-KR/hotel/south-korea/park-hyatt-busan/busph', '부산광역시 해운대구 마린시티1로 51', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/187840181.jpg?k=d27b57dd5d2cee7f2798a901e0965e4ca722567bd7f517b13827e5d0d2a2081e&o=&hp=1'),
-('타워 힐 호텔', 2, 3, 5000, 5000, 5000, 2, 2, 2, '051-250-6100', 'http://www.towerhill.co.kr/', '부산광역시 중구 백산길 20', 'https://lh6.googleusercontent.com/proxy/Jt4KcmXfboKvoxm0stBP6s8WySeGiu6VPvZo-TcolicG5cusCW6-11ae5LxmEvKCgJZA9z7nULi_SIsRgVhFY3k0QWgDjTVqm3ktjg4xfBT7NLoscPdUD0gTKsLrEK9JQor4EqWWUA'),
-('이비스 앰버서더 부산 시티 센터', 2, 3, 5000, 5000, 5000, 2, 2, 2, '051-930-1100', 'https://www.ambatel.com/ibis/busan/ko/main.do', '부산광역시 부산진구 중앙대로 777', 'https://www.ahstatic.com/photos/7835_rodbc_00_p_1024x768.jpg'),
-('홈 호텔', 2, 3, 69578, 5000, 5000, 2, 2, 2, '051-808-6564', 'https://home.busan-hotel.com/ko/', '부산광역시 진구 동천로 85-10', 'https://yaimg.yanolja.com/v5/2020/06/29/11/1280/5ef94d380a17d2.10327206.jpg'),
-('한화리조트 제주', 3, 3, 5000, 5000, 5000, 2, 2, 2, '064-725-9000', 'https://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_intro.do?bp_cd=1101', '제주특별자치도 제주시 봉개동 명림로 575-107', 'https://image.goodchoice.kr/affiliate/2016/05/19/573d26f521db3.jpg'),
-('서귀포 칼 호텔', 3, 5, 5000, 5000, 5000, 2, 2, 2, '064-733-2001', 'https://www.kalhotel.co.kr/', '제주특별자치도 서귀포시 칠십리로 242', 'https://www.kalhotel.co.kr/theme/daontheme_pro07/html/image/standard_d1.jpg'),
-('롯데시티호텔 제주', 3, 4, 5000, 5000, 5000, 2, 2, 2, '064-730-1000', 'https://www.lottehotel.com/jeju-city/', '제주특별자치도 제주시 도령로 83', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/211744681.jpg?k=6d8314def473c22e671e4d52544a66f576bb39e192ad766f1453997c417d7d92&o=&hp=1'),
-('랜딩관 제주신화월드 호텔앤리조트', 3, 5, 5000, 5000, 5000, 2, 2, 2, '064-908-8800', 'https://booking.naver.com/booking/3/bizes/167594', '제주특별자치도 서귀포시 안덕면 신화역사로304-38', 'https://jeju-shinhwa-world-marriott-resort-seogwipo.booked.kr/data/Photos/OriginalPhoto/15883/1588328/1588328135/Landing-Jeju-Shinhwa-World-Hotel-Exterior.JPEG'),
-('히든 클리프 호텔&네이처', 3, 5, 5000, 5000, 5000, 2, 2, 2, '064-752-7777', 'https://www.hiddencliff.kr/', '제주특별자치도 서귀포시 예래해안로 542', 'https://yaimg.yanolja.com/v5/2024/09/13/10/1280/66e41136b64a18.35706414.jpg'),
-('금호 제주 리조트', 3, 4, 5000, 5000, 5000, 2, 2, 2, '064-766-8000', 'https://www.kumhoresort.co.kr/resort/?khr=D1000', '제주특별자치도 서귀포시 남원읍 태위로 522-12', 'https://yaimg.yanolja.com/v5/2023/02/01/13/1280/63da6cbc9060a9.01155961.jpg'),
-('샤인빌 럭셔리 리조트', 3, 5, 5000, 5000, 5000, 2, 2, 2, '064-780-7000', 'https://www.jeju.to/CS/DetailPopup/Lodge.aspx?cid=36', '제주특별자치도 서귀포시 표선면 일주동로', 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_534,q_40,w_800/partner-images/93/6e/88ec6d9776783039bd1929cce2a233569985ff11f8f039adf2e4e266bff0.jpeg'),
-('베이힐 풀&빌라', 3, 5, 5000, 5000, 5000, 2, 2, 2, '064-810-9000', 'http://www.bayhill.co.kr/', '제주특별자치도 서귀포시 예래로 424', 'https://yaimg.yanolja.com/v5/2022/08/19/12/1280/62ff7ec7acc7e8.09111345.jpg'),
-('ACC 디자인 호텔', 4, 3, 5000, 5000, 5000, 2, 2, 2, '062-234-8000', 'https://www.acchotel.kr/', '광주광역시 동구 금남로 2가 28', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/356621959.jpg?k=8d8569fcdbd5d586caf8ff5a6fdfa2f9be829ef9410030447c960d5b3842a776&o=&hp=1'),
-('두바이 호텔', 4, 3, 5000, 5000, 5000, 2, 2, 2, '062-373-0700', 'https://dubaihotel.kr/', '광주광역시 서구 상무번영로 47', 'https://dubai-hotel-gwangju.booked.kr/data/Photos/OriginalPhoto/7761/776144/776144035/Dubai-Hotel-Gwangju-Metropolitan-City-Exterior.JPEG'),
-('홀리데이 인 광주', 4, 4, 5000, 5000, 5000, 2, 2, 2, '062-610-7000', 'https://higwangju.com/index.php?', '광주광역시 서구 치평동 상무누리로 55', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/331491903.jpg?k=891a6fa819d9219154e5926b9b84ec559d63f33b46c158ac367bd2e7afeaa538&o=&hp=1'),
-('호텔 스테이 53', 4, 2, 5000, 5000, 5000, 2, 2, 2, '062-371-0000', 'http://www.stay53.co.kr/', '광주광역시 서구 상무연하로 6', 'https://images.trvl-media.com/lodging/16000000/15150000/15148200/15148128/33469574.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium'),
-('비엔날레 호텔', 4, 3, 5000, 5000, 5000, 2, 2, 2, '062-523-1909', 'http://www.biennalehotel.co.kr/', '광주광역시 북구 운암동 450-3', 'https://image.goodchoice.kr/resize_1280x1024/adimg_new/55861/194047/51b854ce6a952e8b6674c6819988e9fe.jpg');
+('호텔 아트리움', 1, 3, 137059, 146557, 172745, 2, 2, 2, '02-767-9800', 'https://www.seanhotelgroup.com/hotels/atrium-jongno/ko', '서울특별시 종로구 창경궁로 106', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/395825319.jpg?k=ec6a238c2114d635115e504fde7d5c840082b0161eaee417854cbee151585d0c&o=&hp=1'),
+('한옥 호텔 담 서울', 1, 3, 104454, 216356, 223817, 2, 2, 2, '02-741-9906', 'https://hotels.naver.com/hotels/KYK1071519995?adultCnt=2&includeTax=false&checkIn=2024-10-25&checkOut=2024-10-26', '서울특별시 종로구 율곡로 6길', 'https://yaimg.yanolja.com/v5/2024/06/21/16/640/6675b13a723f68.67210886.jpg'),
+('라마다 호텔 앤 스위트 남대문', 1, 5, 367400, 400001, 518650, 2, 2, 2, '02-775-7177', 'https://www.seanhotelgroup.com/hotels/ramada-namdaemun/ko', '서울특별시 중구 칠패로 27', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/381738787.jpg?k=f85b131fb1e12cebeadbe2628d55d9269f1e9ae4d6b116416ab21bfbe0dd921e&o=&hp=1'),
+('엠디 호텔 독산', 1, 4, 134500, 184320, 265000, 2, 2, 2, '02-2096-4000', 'https://mdhoteldoksan.com/', '서울특별시 금천구 시흥대로 315', 'https://yaimg.yanolja.com/v5/2022/10/13/12/1280/6347ff3ef3d7c4.90975308.jpg'),
+('신라스테이 광화문 명동', 1, 4, 190000, 235000, 272000, 2, 2, 2, '02-6060-9000', 'https://m.shillastay.com/gwanghwamun/index.do?lang=ko', '서울특별시 종로구 삼봉로 71', 'https://q-xx.bstatic.com/xdata/images/hotel/max500/58182143.jpg?k=2c52d8f6be8bcf29638a430af16f079ef1a2bb00a2493e9ad88d5109d62a1971&o='),
+('파라스파라 서울', 1, 5, 354000, 439000, 635000, 2, 2, 2, '02-3408-5000', 'https://www.paraspara.co.kr/', '서울특별시 강북구 삼양로 689', 'https://yaimg.yanolja.com/v5/2022/10/12/17/640/6346f86871c386.50433780.png'),
+('호텔 안테룸 서울', 1, 3, 208000, 235000, 805000, 2, 2, 2, '02-542-2300', 'https://www.anteroom-seoul.com/', '서울특별시 강남구 도산대로 153', 'https://yaimg.yanolja.com/v5/2022/09/07/22/1280/63191727c6ea37.54109214.jpg'),
+('호텔 밀리오레 서울', 1, 3, 119000, 157000, 215000, 2, 2, 2, '02-6936-6000', 'https://www.migliorehotel.co.kr/homepage/KOR/index/index', '서울특별시 중구 퇴계로 115', 'https://q-xx.bstatic.com/xdata/images/hotel/max500/331473161.jpg?k=3507e4c5a08c8dd9dc3af23d0339ad75dc14c3e4432537120c54c073157eace4&o='),
+('덴바스타 호텔', 2, 4, 52000, 78000, 248000, 2, 2, 2, '051-819-5001', 'http://www.denbasta.com/', '부산광역시 북구 만덕고개길 72-3', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/550522723.jpg?k=729465b5d8c52a1e323ec5af8f7be1537f8f00b33f1ce8cbe4bb6dfb70374c5a&o=&hp=1'),
+('아벤트리 호텔 부산', 2, 3, 85000, 168000, 205000, 2, 2, 2, '051-260-5001', 'http://aventreebusan.itrocks.kr/', '부산광역시 중구 광복로39번길 6', 'https://yaimg.yanolja.com/v5/2022/04/25/15/1280/6266c35a8f5a21.30330994.jpg'),
+('코모도 호텔 부산', 2, 4, 87000, 115000, 205000, 2, 2, 2, '051-466-9101', 'https://www.commodore.co.kr/html/main/', '부산광역시 중구 중구로 151', 'https://www.commodore.co.kr/img/pop/sub02_img04_2_2.jpg'),
+('크라운 하버 호텔 부산', 2, 4, 95000, 115000, 185000, 2, 2, 2, '051-678-1000', 'https://www.crownharborhotel.com/html/main.asp', '부산광역시 중구 중앙대로 114', 'https://www.crownharborhotel.com/images/contents/sub_ac_03_01_img_1.jpg'),
+('부산 파크하얏트', 2, 5, 415000, 675000, 950000, 2, 2, 2, '051-990-1234', 'https://www.hyatt.com/ko-KR/hotel/south-korea/park-hyatt-busan/busph', '부산광역시 해운대구 마린시티1로 51', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/187840181.jpg?k=d27b57dd5d2cee7f2798a901e0965e4ca722567bd7f517b13827e5d0d2a2081e&o=&hp=1'),
+('타워 힐 호텔', 2, 3, 75000, 106000, 131000, 2, 2, 2, '051-250-6100', 'http://www.towerhill.co.kr/', '부산광역시 중구 백산길 20', 'https://lh6.googleusercontent.com/proxy/Jt4KcmXfboKvoxm0stBP6s8WySeGiu6VPvZo-TcolicG5cusCW6-11ae5LxmEvKCgJZA9z7nULi_SIsRgVhFY3k0QWgDjTVqm3ktjg4xfBT7NLoscPdUD0gTKsLrEK9JQor4EqWWUA'),
+('이비스 앰버서더 부산 시티 센터', 2, 3, 89000, 115000, 165000, 2, 2, 2, '051-930-1100', 'https://www.ambatel.com/ibis/busan/ko/main.do', '부산광역시 부산진구 중앙대로 777', 'https://www.ahstatic.com/photos/7835_rodbc_00_p_1024x768.jpg'),
+('홈 호텔', 2, 3, 32000, 55000, 77000, 2, 2, 2, '051-808-6564', 'https://home.busan-hotel.com/ko/', '부산광역시 진구 동천로 85-10', 'https://yaimg.yanolja.com/v5/2020/06/29/11/1280/5ef94d380a17d2.10327206.jpg'),
+('한화리조트 제주', 3, 3, 95000, 115000, 155000, 2, 2, 2, '064-725-9000', 'https://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_intro.do?bp_cd=1101', '제주특별자치도 제주시 봉개동 명림로 575-107', 'https://image.goodchoice.kr/affiliate/2016/05/19/573d26f521db3.jpg'),
+('서귀포 칼 호텔', 3, 5, 135000, 275000, 515000, 2, 2, 2, '064-733-2001', 'https://www.kalhotel.co.kr/', '제주특별자치도 서귀포시 칠십리로 242', 'https://www.kalhotel.co.kr/theme/daontheme_pro07/html/image/standard_d1.jpg'),
+('롯데시티호텔 제주', 3, 4, 187000, 219000, 374000, 2, 2, 2, '064-730-1000', 'https://www.lottehotel.com/jeju-city/', '제주특별자치도 제주시 도령로 83', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/211744681.jpg?k=6d8314def473c22e671e4d52544a66f576bb39e192ad766f1453997c417d7d92&o=&hp=1'),
+('랜딩관 제주신화월드 호텔앤리조트', 3, 5, 112000, 185000, 295000, 2, 2, 2, '064-908-8800', 'https://booking.naver.com/booking/3/bizes/167594', '제주특별자치도 서귀포시 안덕면 신화역사로304-38', 'https://jeju-shinhwa-world-marriott-resort-seogwipo.booked.kr/data/Photos/OriginalPhoto/15883/1588328/1588328135/Landing-Jeju-Shinhwa-World-Hotel-Exterior.JPEG'),
+('히든 클리프 호텔&네이처', 3, 5, 190000, 246000, 292000, 2, 2, 2, '064-752-7777', 'https://www.hiddencliff.kr/', '제주특별자치도 서귀포시 예래해안로 542', 'https://yaimg.yanolja.com/v5/2024/09/13/10/1280/66e41136b64a18.35706414.jpg'),
+('금호 제주 리조트', 3, 4, 109000, 189000, 278000, 2, 2, 2, '064-766-8000', 'https://www.kumhoresort.co.kr/resort/?khr=D1000', '제주특별자치도 서귀포시 남원읍 태위로 522-12', 'https://yaimg.yanolja.com/v5/2023/02/01/13/1280/63da6cbc9060a9.01155961.jpg'),
+('샤인빌 럭셔리 리조트', 3, 5, 152000, 205000, 324000, 2, 2, 2, '064-780-7000', 'https://www.jeju.to/CS/DetailPopup/Lodge.aspx?cid=36', '제주특별자치도 서귀포시 표선면 일주동로', 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_534,q_40,w_800/partner-images/93/6e/88ec6d9776783039bd1929cce2a233569985ff11f8f039adf2e4e266bff0.jpeg'),
+('베이힐 풀&빌라', 3, 5, 164000, 223000, 516000, 2, 2, 2, '064-810-9000', 'http://www.bayhill.co.kr/', '제주특별자치도 서귀포시 예래로 424', 'https://yaimg.yanolja.com/v5/2022/08/19/12/1280/62ff7ec7acc7e8.09111345.jpg'),
+('ACC 디자인 호텔', 4, 3, 89000, 99000, 170000, 2, 2, 2, '062-234-8000', 'https://www.acchotel.kr/', '광주광역시 동구 금남로 2가 28', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/356621959.jpg?k=8d8569fcdbd5d586caf8ff5a6fdfa2f9be829ef9410030447c960d5b3842a776&o=&hp=1'),
+('두바이 호텔', 4, 3, 73000, 95000, 132000, 2, 2, 2, '062-373-0700', 'https://dubaihotel.kr/', '광주광역시 서구 상무번영로 47', 'https://dubai-hotel-gwangju.booked.kr/data/Photos/OriginalPhoto/7761/776144/776144035/Dubai-Hotel-Gwangju-Metropolitan-City-Exterior.JPEG'),
+('홀리데이 인 광주', 4, 4, 200000, 295000, 750000, 2, 2, 2, '062-610-7000', 'https://higwangju.com/index.php?', '광주광역시 서구 치평동 상무누리로 55', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/331491903.jpg?k=891a6fa819d9219154e5926b9b84ec559d63f33b46c158ac367bd2e7afeaa538&o=&hp=1'),
+('호텔 스테이 53', 4, 2, 65000, 85000, 115000, 2, 2, 2, '062-371-0000', 'http://www.stay53.co.kr/', '광주광역시 서구 상무연하로 6', 'https://images.trvl-media.com/lodging/16000000/15150000/15148200/15148128/33469574.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium'),
+('비엔날레 호텔', 4, 3, 57000, 75000, 194000, 2, 2, 2, '062-523-1909', 'http://www.biennalehotel.co.kr/', '광주광역시 북구 운암동 450-3', 'https://image.goodchoice.kr/resize_1280x1024/adimg_new/55861/194047/51b854ce6a952e8b6674c6819988e9fe.jpg');
 
 
 
@@ -203,6 +203,18 @@ INSERT INTO TouristAttractions (attraction_name, loc_id, features, address, home
 ('무등산', 3, '대한민국의 21번째 국립공원', '광주광역시 북구 무등로 1550', 'https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=122000&menuNo=7020090', 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQRCJGuEIpxWdJj116EncDU95n0tFDc4sEf3jDCRfrmczBu4T1CnpGAo_Qi5tPXmu__2nH3IEX13-7l51dB9W6UNghKCAcoNMlvJWsPog'),
 ('성산 일출봉', 4, '그릇 모양의 분화구가 있는 화산 봉우리', '성산읍 성산리 78', 'https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500349', 'https://lh4.googleusercontent.com/proxy/NkthcsVN9OzJ4_MqIyoVrLcVc-WOTH2MxeyGRZ6dhbcybx-9MPrjvnel4bPZxC8ZOVgMVoHvpBA6605YInBridTrvEDoLWgUW0DaTg5M1YM'),
 ('한라산', 4, '천연기념물 제 420호', '제주시 특별자치도, 110로 2070-61', 'https://jeju.go.kr/hallasan/index.htm', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRKguR-6gbRYIVJ-6Ii1KMUz6TVgr8yolT7SaqTwIcZ_KQFWuYcHth6ziBaKty0v_8HHa1C5cNxW1bkJadrkUSq-Mai0sVkHEvo--j0Qw');
+
+
+/*
+  	Hotels 테이블에 정보 집어넣는 INSERT
+  	(호텔이름 , 지역 , 호텔 등급,
+   	스탠다드 가격, 디럭스 가격, 프리미엄 가격,
+   	스탠다드 방 개수, 디럭스 방 개수, 프리미엄 방 개수,
+	호텔 전화번호, 호텔 주소 , 호텔 image url, 호텔 홈페이지 사이트 )순.
+*/
+INSERT INTO Hotels (hotel_name, loc_id, star_rating, standard_price, deluxe_price, premium_price, 
+                    standard_r, deluxe_r, premium_r, contact_number, address, image_url, homepage_url) VALUES
+(' ', , , , , , , , , ' ', ' ', ' ', ' ');
 
 
 

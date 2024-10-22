@@ -1,4 +1,4 @@
-테이블 sql
+-- 테이블 sql
 
 
 CREATE TABLE Hotels (
