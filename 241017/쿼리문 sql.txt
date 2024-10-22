@@ -1,6 +1,6 @@
 -- 쿼리문만
 
---loc_id, amenities_id  문자 변환 쿼리문
+--loc_id, amenities_id  문자 변환 쿼리문 (image_url,homepage_url 제외)
 
 SELECT H.hotel_id, 
        H.hotel_name, 

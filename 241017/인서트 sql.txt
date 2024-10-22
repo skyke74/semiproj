@@ -1,7 +1,7 @@
 -- 인서트만
 
-INSERT INTO Location(loc_name)VALUES
---1~4
+INSERT INTO Location(loc_name) VALUES
+-- 1~4
 ('서울'),
 ('부산'),
 ('제주'),
@@ -205,8 +205,10 @@ INSERT INTO TouristAttractions (attraction_name, loc_id, features, address, home
 ('한라산', 4, '천연기념물 제 420호', '제주시 특별자치도, 110로 2070-61', 'https://jeju.go.kr/hallasan/index.htm', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRKguR-6gbRYIVJ-6Ii1KMUz6TVgr8yolT7SaqTwIcZ_KQFWuYcHth6ziBaKty0v_8HHa1C5cNxW1bkJadrkUSq-Mai0sVkHEvo--j0Qw');
 
 
+
 /*
   	Hotels 테이블에 정보 집어넣는 INSERT
+
   	(호텔이름 , 지역 , 호텔 등급,
    	스탠다드 가격, 디럭스 가격, 프리미엄 가격,
    	스탠다드 방 개수, 디럭스 방 개수, 프리미엄 방 개수,
