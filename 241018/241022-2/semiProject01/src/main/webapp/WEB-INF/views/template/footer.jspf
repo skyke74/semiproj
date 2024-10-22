@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+	</div>
+	<div class="row">
+	 <p style="height: 150px;">&nbsp;</p> 
+		<address style="text-align: center;">
+			<p>일부 호텔은 체크인 24시간 이상 전에 취소해야 합니다. </p>
+			<p>자세한 내용은 사이트에서 확인해 주세요.</p>
+			<p>문의하기: 055-1234-5678, 이메일: CS@koreasupport.hotels.com</p>
+		</address>
+	</div>
+</div>
