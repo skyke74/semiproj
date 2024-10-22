@@ -28,7 +28,7 @@ JOIN Location L ON H.loc_id = L.loc_id
 GROUP BY H.hotel_id, H.hotel_name, L.loc_name, H.star_rating, H.price_per_night, H.room_count, H.contact_number, H.address, H.image_url, H.homepage_url;
 
 
--- loc_id를 지역명으로 보여주게 하는 쿼리문
+-- 관광명소{ loc_id를 지역명으로 보여주게 하는 쿼리문 }
 SELECT TA.attraction_name, L.loc_name, TA.features, TA.address, TA.homepage, TA.image_url
 FROM TouristAttractions TA
 JOIN Location L ON TA.loc_id = L.loc_id;

@@ -1,22 +1,24 @@
 테이블 sql
 
 
---호텔 테이블
 CREATE TABLE Hotels (
     hotel_id INT PRIMARY KEY AUTO_INCREMENT, -- 호텔 id
     hotel_name VARCHAR(100) NOT NULL, -- 호텔 이름
     loc_id INT NOT NULL, -- 지역 
     star_rating INT CHECK (star_rating BETWEEN 1 AND 5), -- 호텔 성급
-    price_per_night INT NOT NULL, -- 1박 가격
     standard_r INT NOT NULL, -- 스탠다드 방 개수
     deluxe_r INT NOT NULL, -- 디럭스 방 개수
     premium_r INT NOT NULL, -- 프리미엄 방 개수
+    standard_price INT NOT NULL, -- 스탠다드 방 가격 (1박당)
+    deluxe_price INT NOT NULL, -- 디럭스 방 가격 (1박당)
+    premium_price INT NOT NULL, -- 프리미엄 방 가격 (1박당)
     contact_number VARCHAR(15), -- 호텔 전화 번호
     homepage_url VARCHAR(255),  -- 호텔 홈페이지 URL
     address VARCHAR(255),       -- 호텔 주소
     image_url VARCHAR(255),     -- 호텔 이미지 URL
-    amenity_id INT
+    amenity_id INT -- 호텔 편의시설 ID
 );
+
 
 -- 어메니티 테이블
 CREATE TABLE Amenities (
@@ -52,7 +54,7 @@ CREATE TABLE TouristAttractions (
     image_url VARCHAR(255)
 );
 
-- 회원 정보
+-- 회원 정보
 CREATE TABLE Users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
