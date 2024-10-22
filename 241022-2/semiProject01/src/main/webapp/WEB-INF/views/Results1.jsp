@@ -61,7 +61,8 @@
 	.description-text2 {
    
     margin-left: 50px; /* 왼쪽 간격 설정 (선택 사항) */
-    margin-right: 150px; /* 오른쪽 간격 설정 (선택 사항) */
+    margin-right: 120px; /* 오른쪽 간격 설정 (선택 사항) */
+    
 }
 	.description-text3,
 	.description-text4
@@ -72,8 +73,9 @@
 	
     
     h1{
-    	font-size: 20px;
+    	font-size: 25px;
     	margin:10px;
+    	margin-bottom:15px;
     	
     }
 
@@ -118,10 +120,10 @@ label{
         </select>
 
         <label for="checkin">체크인:</label>
-        <input type="date" id="checkin" name="checkin" required>
+        <input type="date" id="checkin" name="checkin" required min="2024-01-01", max="2025-12-31">
 
         <label for="checkout">체크아웃:</label>
-        <input type="date" id="checkout" name="checkout" required>
+        <input type="date" id="checkout" name="checkout"  required min="2024-01-01", max="2025-12-31">
 
         <label for="guests">인원수:</label>
         <input type="number" id="guests" name="guests" min="1" required>
@@ -133,11 +135,7 @@ label{
     </form>
 </div>
 
-
-    
     <p class="hotel-info-title">&nbsp;&nbsp;호텔정보</p>
-
-    
     <div class="container"> 
        <div class="section"> 
         	 <div class="title-container">
@@ -152,8 +150,12 @@ label{
                     <h2>&nbsp;&nbsp;&nbsp;무료 Wi-Fi &nbsp; &nbsp; 조식 &nbsp; &nbsp; </h2> 
                      <h2>&nbsp;&nbsp;&nbsp;Raum에서 아침 및 점심식사 가능 </h2>               
                     <h1><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;주소 : 중구 창경궁로 106</h1>
-                    <h1><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;전화번호: 02-767-9800</h1>
-                    
+                    <h1><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;전화번호: 02-767-9800</h1>                    
+                </div>
+                
+                 <div class="description-text2">
+                    <h1><span class="glyphicon glyphicon-bell" aria-hidden="true"></span><a href="Order1" type="button"> 예약하기</a></h1>  
+                    <h1><span class="glyphicon glyphicon-star" aria-hidden="true"></span><a href="Find1" type="button"> 즐겨찾기</a></h1>          
                 </div>
             </div>
      

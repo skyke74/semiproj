@@ -29,6 +29,16 @@ public class HomeController {
 		return "Results1";
 	}
 	
+	@RequestMapping(value = "/Order1", method = RequestMethod.GET)
+	public String Order1(Locale locale, Model model) {
+		return "Order1";
+	}
+	
+	@RequestMapping(value = "/Find1", method = RequestMethod.GET)
+	public String Find1(Locale locale, Model model) {
+		return "Find1";
+	}
+	
 	@RequestMapping(value = "/login/", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
 		return "login/login";
@@ -39,9 +49,9 @@ public class HomeController {
 		return "signup/signup";
 	}
 	
-	@RequestMapping(value = "/join/", method = RequestMethod.GET)
+	@RequestMapping(value = "/mypage/", method = RequestMethod.GET)
 	public String join(Locale locale, Model model) {
-		return "join/join";
+		return "mypage/mypage";
 	}
 	
 	@RequestMapping(value = "/emp/", method = RequestMethod.GET)

@@ -48,6 +48,10 @@
         flex-grow: 1; /* 텍스트 영역이 이미지 옆에서 확장되도록 */
     }
     
+    .description-text2 {
+       margin-right: 100px;
+    }
+    
     h1{
     	font-size: 20px;
     	margin:20px;
@@ -92,10 +96,10 @@ label{
         </select>
 
         <label for="checkin">체크인:</label>
-        <input type="date" id="checkin" name="checkin" required>
+        <input type="date" id="checkin" name="checkin" required min="2024-01-01",max="2025-12-31">
 
         <label for="checkout">체크아웃:</label>
-        <input type="date" id="checkout" name="checkout" required>
+        <input type="date" id="checkout" name="checkout" required min="2024-01-01",max="2025-12-31">
 
         <label for="guests">인원수:</label>
         <input type="number" id="guests" name="guests" min="1" required>
@@ -121,7 +125,7 @@ label{
                     <h1><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;주소 : 중구 창경궁로 106</h1>
                     <h1><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;전화번호: 02-767-9800</h1>
                      <h1><a href="Results1" type="button">자세히 보기</a></h1>
-                </div>
+                </div>           
             </div>
      
       

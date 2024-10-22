@@ -76,7 +76,7 @@
             }
 
             // 모든 조건을 통과하면 로그인 페이지로 이동
-            location.href = '${root}/hotels/join/';
+            location.href = '${root}/hotels/mypage/';
         }
     </script>
 </head>

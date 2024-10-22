@@ -99,10 +99,10 @@
         </select>
 
         <label for="checkin">체크인:</label>
-        <input type="date" id="checkin" name="checkin" required>
+        <input type="date" id="checkin" name="checkin" required min="2024-01-01", max="2025-12-31">
 
         <label for="checkout">체크아웃:</label>
-        <input type="date" id="checkout" name="checkout" required>
+        <input type="date" id="checkout" name="checkout" required min="2024-01-01", max="2025-12-31">
 
         <label for="guests">인원수:</label>
         <input type="number" id="guests" name="guests" min="1" required>
