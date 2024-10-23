@@ -64,3 +64,14 @@ CREATE TABLE Users (
     birth_date DATE
 );
 
+
+--예약 정보
+CREATE TABLE room_reservation (
+    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+    guest_name VARCHAR(100) NOT NULL, --이름
+    check_in DATE NOT NULL, --체크인
+    check_out DATE NOT NULL, --체크아웃
+    hotel_name VARCHAR(100) NOT NULL, --호텔명
+    room_info VARCHAR(100) NOT NULL, --객실 정보
+    price INT NOT NULL  -- 객실 가격
+);

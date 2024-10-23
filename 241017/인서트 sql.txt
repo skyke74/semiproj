@@ -218,5 +218,15 @@ INSERT INTO Hotels (hotel_name, loc_id, star_rating, standard_price, deluxe_pric
                     standard_r, deluxe_r, premium_r, contact_number, address, image_url, homepage_url) VALUES
 (' ', , , , , , , , , ' ', ' ', ' ', ' ');
 
+/*
+
+ 	INSERT 테이블에 정보 집어넣는 INSERT
+	(손님 이름, 체크인 날짜('yyyy-mm-dd'),체크아웃 날짜('yyyy-mm-dd'),호텔 이름, 객실 정보, 가격)
+*/
+
+INSERT INTO room_reservations (guest_name, check_in, check_out, hotel_name, room_info, price)
+VALUES 
+(' ', ' ', ' ', ' ', ' ',  );
+
 
 
