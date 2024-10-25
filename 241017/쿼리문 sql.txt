@@ -110,7 +110,7 @@ GROUP BY H.hotel_id,
          f.user_id, 
          u.name;
 
--- 즐겨찾기 안된 호텔들은 배제하는 쿼리문
+-- 즐겨찾기 안된 호텔들은 배제하는 쿼리문 (예약한 날짜도 포함)
 SELECT 
     H.hotel_id, 
     H.hotel_name, 
@@ -127,14 +127,15 @@ SELECT
     GROUP_CONCAT(A.amenity_name SEPARATOR ', ') AS amenities, 
     H.image_url, 
     H.homepage_url,
-    f.user_id,                 
-    u.name AS user_name     
+    f.user_id,              
+    u.name AS user_name,       
+    f.created_at AS favorite_date 
 FROM Hotels H
 JOIN HotelAmenities HA ON H.hotel_id = HA.hotel_id
 JOIN Amenities A ON HA.amenity_id = A.amenity_id
 JOIN Location L ON H.loc_id = L.loc_id
 INNER JOIN favorites f ON H.hotel_id = f.hotel_id  
-INNER JOIN users u ON f.user_id = u.user_id     
+INNER JOIN users u ON f.user_id = u.user_id    
 GROUP BY H.hotel_id, 
          H.hotel_name, 
          L.loc_name, 
@@ -150,8 +151,8 @@ GROUP BY H.hotel_id,
          H.image_url, 
          H.homepage_url,
          f.user_id, 
-         u.name;
-
+         u.name,
+         f.created_at;  
 
 
 -- 관광명소{ loc_id를 지역명으로 보여주게 하는 쿼리문 }
