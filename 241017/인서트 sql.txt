@@ -206,6 +206,21 @@ INSERT INTO TouristAttractions (attraction_name, loc_id, features, address, home
 
 
 
+INSERT INTO users (email, password, name, birth_date, address)
+VALUES 
+('test1@example.com', '1234', '김박두레', '1990-01-15', '부산시 연제구 연산동'),
+('test2@example.com', '5456', '김덕배', '1985-03-22', '부산시 해운대구 우3동'),
+('test3@example.com', '1789', '박사랑', '1992-07-11', '부산시 동래구 안락동');
+
+
+
+--즐겨찾기 (사용자가 호텔을 즐겨찾기에 추가할 때 INSERT 문
+INSERT INTO favorites (user_id, hotel_id)
+VALUES (1, 1); -- 예시
+
+
+
+
 /*
   	Hotels 테이블에 정보 집어넣는 INSERT
 

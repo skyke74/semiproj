@@ -75,3 +75,14 @@ CREATE TABLE room_reservation (
     room_info VARCHAR(100) NOT NULL, --객실 정보
     price INT NOT NULL  -- 객실 가격
 );
+
+--즐겨찾기 정보
+CREATE TABLE favorites (
+    favorite_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,                     
+    hotel_id INT NOT NULL,                     
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, --즐겨찾기 등록 날짜
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE, --외래키 설정
+    FOREIGN KEY (hotel_id) REFERENCES hotels(hotel_id) ON DELETE CASCADE
+);
+

@@ -75,9 +75,31 @@ FROM TouristAttractions TA
 JOIN Location L ON TA.loc_id = L.loc_id;
 
 
--- 새로운 사용자 생성 (username과 password는 원하는 값으로 변경)
-CREATE USER 'username'@'%' IDENTIFIED BY 'password';
--- 모든 데이터베이스에 대한 권한 부여
-GRANT ALL PRIVILEGES ON *.* TO 'username'@'%';
--- 권한 변경 사항 적용
-FLUSH PRIVILEGES;
+--특정 유저의 즐겨찾기를 조회할 때
+SELECT 
+    u.user_id AS user_id,         
+    u.name AS user_name,
+    u.birth_date AS user_birth_date,
+    h.hotel_name AS favorite_hotel_name,
+    f.created_at AS favorite_date
+FROM favorites f
+JOIN users u ON f.user_id = u.user_id
+JOIN hotels h ON f.hotel_id = h.hotel_id
+WHERE f.user_id = ?;             -- ??에 user id추가
+
+
+
+--전체 유저의 즐겨찾기를 조회할 때
+SELECT 
+    u.user_id AS user_id, 
+    u.name AS user_name,
+    u.birth_date AS user_birth_date,
+    h.hotel_name AS favorite_hotel_name,
+    f.created_at AS favorite_date
+FROM favorites f
+JOIN users u ON f.user_id = u.user_id
+JOIN hotels h ON f.hotel_id = h.hotel_id;
+
+
+
+
