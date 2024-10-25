@@ -110,6 +110,49 @@ GROUP BY H.hotel_id,
          f.user_id, 
          u.name;
 
+-- 즐겨찾기 안된 호텔들은 배제하는 쿼리문
+SELECT 
+    H.hotel_id, 
+    H.hotel_name, 
+    L.loc_name, 
+    H.star_rating, 
+    H.standard_price,           -- 스탠다드 방 가격
+    H.deluxe_price,             -- 디럭스 방 가격
+    H.premium_price,            -- 프리미엄 방 가격
+    H.standard_r AS standard_room_count,  -- 스탠다드 방 개수
+    H.deluxe_r AS deluxe_room_count,      -- 디럭스 방 개수
+    H.premium_r AS premium_room_count,     -- 프리미엄 방 개수
+    H.contact_number, 
+    H.address, 
+    GROUP_CONCAT(A.amenity_name SEPARATOR ', ') AS amenities, 
+    H.image_url, 
+    H.homepage_url,
+    f.user_id,                 
+    u.name AS user_name     
+FROM Hotels H
+JOIN HotelAmenities HA ON H.hotel_id = HA.hotel_id
+JOIN Amenities A ON HA.amenity_id = A.amenity_id
+JOIN Location L ON H.loc_id = L.loc_id
+INNER JOIN favorites f ON H.hotel_id = f.hotel_id  
+INNER JOIN users u ON f.user_id = u.user_id     
+GROUP BY H.hotel_id, 
+         H.hotel_name, 
+         L.loc_name, 
+         H.star_rating, 
+         H.standard_price, 
+         H.deluxe_price, 
+         H.premium_price, 
+         H.standard_r, 
+         H.deluxe_r, 
+         H.premium_r, 
+         H.contact_number, 
+         H.address, 
+         H.image_url, 
+         H.homepage_url,
+         f.user_id, 
+         u.name;
+
+
 
 -- 관광명소{ loc_id를 지역명으로 보여주게 하는 쿼리문 }
 
