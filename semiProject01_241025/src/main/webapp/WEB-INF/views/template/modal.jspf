@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">호텔 예약정보</h4>
+			</div>
+			<div class="reservation-info" style="width: 80%; margin: 100 auto; text-align: center;">
+				<table class="table table-bordered" style="width: 80%; margin: 0 auto;">
+					<tr>
+						<th style= "text-align: center;">이름</th>
+						<td>${sessionScope.user }</td>
+					</tr>
+					<tr>
+						<th style= "text-align: center;">호텔명</th>
+						<td>${bean.hotel_name }</td>
+					</tr>
+					<tr>
+						<th style= "text-align: center;">객실</th>
+						<td>${bean.room_info }</td>
+					</tr>
+					<tr>
+						<th style= "text-align: center;">체크인</th>
+						<td>${bean.check_in }</td>
+					</tr>
+					<tr>
+						<th style= "text-align: center;">체크아웃</th>
+						<td>${bean.check_out }</td>
+					</tr>
+					<tr>
+						<th style= "text-align: center;">결제금액</th>
+						<td>${bean.price}</td>
+					</tr>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+				<button type="button" class="btn btn-danger cancel" >예약 취소하기</button>
+			</div>
+		</div>
+	</div>
+</div>

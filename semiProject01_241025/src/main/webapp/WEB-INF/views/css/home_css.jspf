@@ -1,0 +1,62 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<style>
+  .image-text {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  /* Carousel 전체 영역에 동일한 크기 설정 */
+  .carousel-inner {
+    width: 100%;
+    height: 500px;
+  }
+
+  /* 이미지를 중앙에 두고 동일한 크기로 유지 */
+  .carousel-inner .item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  /* Carousel control (이전, 다음 버튼) 스타일 */
+  .carousel-control {
+    width: 5%;
+  }
+
+  /* Carousel caption (설명 텍스트) 중앙 정렬 */
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    text-align: center;
+    color: white;
+  }
+</style>

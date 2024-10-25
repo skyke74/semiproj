@@ -1,0 +1,72 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호텔 예약 사이트</title>
+   
+    <style>
+        /* 내비게이션 링크의 기본 스타일 */
+        .navbar-nav .text-uppercase {
+            color: black; /* 기본 텍스트 색상 */
+            text-decoration: none; /* 밑줄 제거 */
+            padding: 10px 15px; /* 텍스트 주위에 여백 추가 */
+            display: inline-block; /* 링크가 버튼처럼 보이도록 설정 */
+            transition: background-color 0.3s ease; /* 배경색 전환 효과 추가 */
+        }
+
+        /* 로그인 링크에 대한 hover 효과 */
+        .navbar-nav .text-uppercase:hover {
+            color: blue; /* hover 시 텍스트 색상 변경 */
+            background-color: lightblue; /* hover 시 배경색 변경 */
+            transition: color 0.3s ease, background-color 0.3s ease; /* 부드러운 전환 효과 */
+        }
+
+        /* 내비게이션 목록 스타일 */
+        .navbar-nav {
+            list-style-type: none; /* 글머리 기호 제거 */
+            padding: 0; /* 기본 패딩 제거 */
+            margin: 0; /* 기본 마진 제거 */
+        }
+
+        .navbar-nav li {
+            display: inline; /* 목록 항목을 가로로 표시 */
+            margin-right: 15px; /* 항목 간 간격 추가 */
+        }
+
+        .custom-nav {
+            margin-right: 10px; /* 오른쪽에 10px의 여백 추가 */
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid"></div>
+    <div class="navbar-header">
+        <div class="navbar-brand">호텔예약사이트</div>
+    </div>
+    <ul class="nav navbar-nav navbar-right custom-nav">
+    	<li><a class="user" href="${root }/mypage">${sessionScope.user }님 환영합니다.</a></li>
+        <li><a class="text-uppercase" href="${root }/">home</a></li>
+        <li><a class="text-uppercase" href="${root }/intro">관광명소</a></li>
+        <li><a class="text-uppercase" href="${root }/help">도움말</a></li>
+        <li><a class="text-uppercase login" href="${root }/login">로그인</a></li>
+        <li><a class="text-uppercase logout" href="${root }/logout">로그아웃</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="row">
+        <!-- 여기에 콘텐츠 추가 -->
+    </div>
+</div>
+<script type="text/javascript">
+var user='${sessionScope.email}';
+if(user==''){$('.user').hide();$('.logout').hide();}
+else{$('.login').hide();}
+</script>
+</body>
+</html>
+

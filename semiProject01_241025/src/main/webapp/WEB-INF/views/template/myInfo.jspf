@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div class="btn-group dropdown">
+	<button type="button" class="btn btn-default">내정보</button>
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	</button>
+	<ul class="dropdown-menu">
+		<li><p style="text-align: center;">회원 정보</p></li>
+		<li><p>User ID </p></li>
+		<li><p>${sessionScope.user }</p></li>
+		
+		<li role="separator" class="divider"></li>
+		<li><p>생년월일 </p></li>
+		<li><p>${sessionScope.bd }</p></li>
+		
+		<li role="separator" class="divider"></li>
+		<li><a href="${root}/changePW/">비밀번호 변경 </a></li>
+		
+		<li role="separator" class="divider"></li>
+	</ul>
+</div>

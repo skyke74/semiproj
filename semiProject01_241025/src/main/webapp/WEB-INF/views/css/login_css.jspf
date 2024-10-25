@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<style>
+    /* 로그인 컨테이너 스타일 */
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px; /* 컨테이너의 고정 너비 */
+        margin: 0 auto; /* 페이지 중앙에 위치 */
+    }
+
+    /* 입력 필드와 버튼 스타일 */
+    .login-container input, .login-container button {
+        width: 100%; 
+        margin: 10px 0; /* 위아래로 10px 간격 추가 */
+        padding: 10px; /* 내부 여백 추가 */
+        font-size: 1rem; /* 글자 크기 설정 */
+    }
+
+    /* 버튼에 커서 모양 추가 */
+    .login-container button {
+        cursor: pointer; /* 버튼 위에 마우스 올렸을 때 손 모양으로 변경 */
+    }
+
+    /* 버튼 컨테이너 */
+    .button-container {
+        width: 108%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 버튼들 간격 추가 */
+    .button-container button {
+        margin: 5px 0; /* 버튼 사이에 5px 간격 추가 */
+    }
+
+    /* 주소(p 태그) 가운데 정렬 */
+    address p {
+        text-align: left;
+    }
+</style>
