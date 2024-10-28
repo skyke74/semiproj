@@ -31,7 +31,7 @@ GROUP BY H.hotel_id,
          H.contact_number
 
 
---최종통합 Hotels 쿼리문 
+--최종통합 Hotels 테이블 정보 쿼리문 
 
 SELECT H.hotel_id, 
        H.hotel_name, 
@@ -186,6 +186,65 @@ SELECT
 FROM favorites f
 JOIN users u ON f.user_id = u.user_id
 JOIN hotels h ON f.hotel_id = h.hotel_id;
+
+
+-- Standard Room 조회
+SELECT 
+    sr.reservation_id,         -- 예약 ID
+    u.name AS user_name,        -- 사용자 이름
+    h.hotel_name,               -- 호텔 이름
+    h.image_url1,               -- 호텔 이미지 URL
+    sr.guest_name,              -- 손님 이름
+    sr.check_in,                -- 체크인 날짜
+    sr.check_out,               -- 체크아웃 날짜
+    sr.room_info,               -- 객실 정보
+    sr.price                    -- 객실 가격
+FROM 
+    standard_room_reservation sr
+JOIN 
+    Users u ON sr.user_id = u.user_id
+JOIN 
+    Hotels h ON sr.hotel_id = h.hotel_id;
+
+-- Deluxe Room 조회
+SELECT 
+    dr.reservation_id,
+    u.name AS user_name,
+    h.hotel_name,
+    h.image_url1,
+    dr.guest_name,
+    dr.check_in,
+    dr.check_out,
+    dr.room_info,
+    dr.price
+FROM 
+    deluxe_room_reservation dr
+JOIN 
+    Users u ON dr.user_id = u.user_id
+JOIN 
+    Hotels h ON dr.hotel_id = h.hotel_id;
+
+-- Premium Room 조회
+SELECT 
+    pr.reservation_id,
+    u.name AS user_name,
+    h.hotel_name,
+    h.image_url1,
+    pr.guest_name,
+    pr.check_in,
+    pr.check_out,
+    pr.room_info,
+    pr.price
+FROM 
+    premium_room_reservation pr
+JOIN 
+    Users u ON pr.user_id = u.user_id
+JOIN 
+    Hotels h ON pr.hotel_id = h.hotel_id;
+
+
+
+
 
 
 

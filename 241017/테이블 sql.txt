@@ -65,15 +65,46 @@ CREATE TABLE Users (
 );
 
 
---예약 정보
-CREATE TABLE room_reservation (
+-- 스탠다드 룸 예약 정보
+CREATE TABLE standard_room_reservation (
     reservation_id INT AUTO_INCREMENT PRIMARY KEY,
-    guest_name VARCHAR(100) NOT NULL, --이름
-    check_in DATE NOT NULL, --체크인
-    check_out DATE NOT NULL, --체크아웃
-    hotel_name VARCHAR(100) NOT NULL, --호텔명
-    room_info VARCHAR(100) NOT NULL, --객실 정보
-    price INT NOT NULL  -- 객실 가격
+    user_id INT NOT NULL, -- Users 테이블에서 가져온 유저 ID
+    hotel_id INT NOT NULL, -- Hotels 테이블에서 가져온 호텔 ID
+    guest_name VARCHAR(100) NOT NULL, -- 손님 이름
+    check_in DATE NOT NULL, -- 체크인 날짜
+    check_out DATE NOT NULL, -- 체크아웃 날짜
+    room_info VARCHAR(100) NOT NULL, -- 객실 정보
+    price INT NOT NULL, -- 객실 가격 (standard_price에서 가져옴)
+    FOREIGN KEY (user_id) REFERENCES Users(user_id), -- Users 테이블과 외래키 연관
+    FOREIGN KEY (hotel_id) REFERENCES Hotels(hotel_id) -- Hotels 테이블과 외래키 연관
+);
+
+-- 디럭스 룸 예약 정보
+CREATE TABLE deluxe_room_reservation (
+    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL, 
+    hotel_id INT NOT NULL,
+    guest_name VARCHAR(100) NOT NULL,
+    check_in DATE NOT NULL,
+    check_out DATE NOT NULL,
+    room_info VARCHAR(100) NOT NULL,
+    price INT NOT NULL, -- 객실 가격 (deluxe_price에서 가져옴)
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    FOREIGN KEY (hotel_id) REFERENCES Hotels(hotel_id)
+);
+
+-- 프리미엄 룸 예약 정보
+CREATE TABLE premium_room_reservation (
+    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    hotel_id INT NOT NULL,
+    guest_name VARCHAR(100) NOT NULL,
+    check_in DATE NOT NULL,
+    check_out DATE NOT NULL,
+    room_info VARCHAR(100) NOT NULL,
+    price INT NOT NULL, -- 객실 가격 (premium_price에서 가져옴)
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    FOREIGN KEY (hotel_id) REFERENCES Hotels(hotel_id)
 );
 
 --즐겨찾기 정보

@@ -7,7 +7,7 @@ INSERT INTO Location(loc_name) VALUES
 ('제주'),
 ('광주');
 
-INSERT INTO Hotels (hotel_name, loc_id, star_rating, standard_price, deluxe_price, premium_price, standard_r, deluxe_r, premium_r, contact_number, homepage_url, address, image_url) VALUES 
+INSERT INTO Hotels (hotel_name, loc_id, star_rating, standard_price, deluxe_price, premium_price, standard_r, deluxe_r, premium_r, contact_number, homepage_url, address, image_url1) VALUES 
 ('호텔 아트리움', 1, 3, 137059, 146557, 172745, 2, 2, 2, '02-767-9800', 'https://www.seanhotelgroup.com/hotels/atrium-jongno/ko', '서울특별시 종로구 창경궁로 106', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/395825319.jpg?k=ec6a238c2114d635115e504fde7d5c840082b0161eaee417854cbee151585d0c&o=&hp=1'),
 ('한옥 호텔 담 서울', 1, 3, 104454, 216356, 223817, 2, 2, 2, '02-741-9906', 'https://hotels.naver.com/hotels/KYK1071519995?adultCnt=2&includeTax=false&checkIn=2024-10-25&checkOut=2024-10-26', '서울특별시 종로구 율곡로 6길', 'https://yaimg.yanolja.com/v5/2024/06/21/16/640/6675b13a723f68.67210886.jpg'),
 ('라마다 호텔 앤 스위트 남대문', 1, 5, 367400, 400001, 518650, 2, 2, 2, '02-775-7177', 'https://www.seanhotelgroup.com/hotels/ramada-namdaemun/ko', '서울특별시 중구 칠패로 27', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/381738787.jpg?k=f85b131fb1e12cebeadbe2628d55d9269f1e9ae4d6b116416ab21bfbe0dd921e&o=&hp=1'),
@@ -219,29 +219,55 @@ INSERT INTO favorites (user_id, hotel_id)
 VALUES (1, 1); -- 예시
 
 
-
-
 /*
   	Hotels 테이블에 정보 집어넣는 INSERT
 
   	(호텔이름 , 지역 , 호텔 등급,
    	스탠다드 가격, 디럭스 가격, 프리미엄 가격,
    	스탠다드 방 개수, 디럭스 방 개수, 프리미엄 방 개수,
-	호텔 전화번호, 호텔 주소 , 호텔 image url, 호텔 홈페이지 사이트 )순.
+	호텔 전화번호, 호텔 주소 , 호텔 image url1, 호텔 홈페이지 사이트 )순.
 */
 INSERT INTO Hotels (hotel_name, loc_id, star_rating, standard_price, deluxe_price, premium_price, 
-                    standard_r, deluxe_r, premium_r, contact_number, address, image_url, homepage_url) VALUES
+                    standard_r, deluxe_r, premium_r, contact_number, address, image_url1, homepage_url) VALUES
 (' ', , , , , , , , , ' ', ' ', ' ', ' ');
 
-/*
 
- 	INSERT 테이블에 정보 집어넣는 INSERT
-	(손님 이름, 체크인 날짜('yyyy-mm-dd'),체크아웃 날짜('yyyy-mm-dd'),호텔 이름, 객실 정보, 가격)
-*/
+-- Standard 방 예약 데이터 삽입
+INSERT INTO standard_room_reservation (user_id, hotel_id, guest_name, check_in, check_out, room_info, price)
+VALUES (
+    ?,                                        -- Users 테이블의 user_id
+    ?,                                       -- Hotels 테이블의 hotel_id
+    '',                               -- 손님 이름
+    '',                             -- 체크인 날짜
+    '',                             -- 체크아웃 날짜
+    '스탠다드 룸',                            -- 객실 정보
+    (SELECT standard_price FROM Hotels WHERE hotel_id = 22)  -- Hotels에서 스탠다드 가격 가져오기
+);
 
-INSERT INTO room_reservations (guest_name, check_in, check_out, hotel_name, room_info, price)
-VALUES 
-(' ', ' ', ' ', ' ', ' ',  );
+-- Deluxe 예약 데이터 삽입
+INSERT INTO deluxe_room_reservation (user_id, hotel_id, guest_name, check_in, check_out, room_info, price)
+VALUES (
+    ?,                                        -- Users 테이블의 user_id
+    ?,                                       -- Hotels 테이블의 hotel_id
+    '',                               -- 손님 이름
+    '',                             -- 체크인 날짜
+    '',                             -- 체크아웃 날짜
+    '',                              -- 객실 정보
+    (SELECT deluxe_price FROM Hotels WHERE hotel_id = (호텔id) )  -- Hotels에서 디럭스 가격 가져오기
+);
+
+-- Premium 예약 데이터 삽입
+INSERT INTO premium_room_reservation (user_id, hotel_id, guest_name, check_in, check_out, room_info, price)
+VALUES (
+    ?,                                        -- Users 테이블의 user_id
+    ?,                                       -- Hotels 테이블의 hotel_id
+    '',                               -- 손님 이름
+    '',                             -- 체크인 날짜
+    '',                             -- 체크아웃 날짜
+    '',                            -- 객실 정보
+    (SELECT premium_price FROM Hotels WHERE hotel_id = ?)  -- Hotels에서 프리미엄 가격 가져오기
+);
+
 
 
 
