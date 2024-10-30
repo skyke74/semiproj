@@ -33,39 +33,55 @@ GROUP BY H.hotel_id,
 
 --최종통합 Hotels 테이블 정보 쿼리문 
 
-SELECT H.hotel_id, 
-       H.hotel_name, 
-       L.loc_name, 
-       H.star_rating, 
-       H.standard_price,   -- 스탠다드 방 가격
-       H.deluxe_price,     -- 디럭스 방 가격
-       H.premium_price,    -- 프리미엄 방 가격
-       H.standard_r AS standard_room_count,  -- 스탠다드 방 개수
-       H.deluxe_r AS deluxe_room_count,      -- 디럭스 방 개수
-       H.premium_r AS premium_room_count,     -- 프리미엄 방 개수
-       H.contact_number, 
-       H.address, 
-       GROUP_CONCAT(A.amenity_name SEPARATOR ', ') AS amenities, 
-       H.image_url, 
-       H.homepage_url
-FROM Hotels H
-JOIN HotelAmenities HA ON H.hotel_id = HA.hotel_id
-JOIN Amenities A ON HA.amenity_id = A.amenity_id
-JOIN Location L ON H.loc_id = L.loc_id
-GROUP BY H.hotel_id, 
-         H.hotel_name, 
-         L.loc_name, 
-         H.star_rating, 
-         H.standard_price, 
-         H.deluxe_price, 
-         H.premium_price, 
-         H.standard_r, 
-         H.deluxe_r, 
-         H.premium_r, 
-         H.contact_number, 
-         H.address, 
-         H.image_url, 
-         H.homepage_url;
+SELECT 
+    H.hotel_id, 
+    H.hotel_name, 
+    L.loc_name, 
+    H.star_rating, 
+    H.standard_price,               -- 스탠다드 방 가격
+    H.deluxe_price,                 -- 디럭스 방 가격
+    H.premium_price,                -- 프리미엄 방 가격
+    H.standard_r AS standard_room_count,  -- 스탠다드 방 개수
+    H.deluxe_r AS deluxe_room_count,      -- 디럭스 방 개수
+    H.premium_r AS premium_room_count,    -- 프리미엄 방 개수
+    H.contact_number, 
+    H.address, 
+    GROUP_CONCAT(A.amenity_name SEPARATOR ', ') AS amenities, 
+    H.image_url1, 
+    H.image_url2,       
+    H.image_url3,       
+    H.image_urls,       -- 스탠다드 룸 이미지
+    H.image_urld,       -- 디럭스 룸 이미지
+    H.image_urlp,       -- 프리미엄 룸 이미지
+    H.homepage_url
+FROM 
+    Hotels H
+JOIN 
+    HotelAmenities HA ON H.hotel_id = HA.hotel_id
+JOIN 
+    Amenities A ON HA.amenity_id = A.amenity_id
+JOIN 
+    Location L ON H.loc_id = L.loc_id
+GROUP BY 
+    H.hotel_id, 
+    H.hotel_name, 
+    L.loc_name, 
+    H.star_rating, 
+    H.standard_price, 
+    H.deluxe_price, 
+    H.premium_price, 
+    H.standard_r, 
+    H.deluxe_r, 
+    H.premium_r, 
+    H.contact_number, 
+    H.address, 
+    H.image_url1, 
+    H.image_url2, 
+    H.image_url3, 
+    H.image_urls, 
+    H.image_urld, 
+    H.image_urlp, 
+    H.homepage_url;
 
 
 -- 전체 정보 (즐겨찾기한 user_id와 user_name 조회)
@@ -83,7 +99,7 @@ SELECT
     H.contact_number, 
     H.address, 
     GROUP_CONCAT(A.amenity_name SEPARATOR ', ') AS amenities, 
-    H.image_url, 
+    H.image_url1, 
     H.homepage_url,
     f.user_id,                 
     u.name AS user_name       
@@ -105,7 +121,7 @@ GROUP BY H.hotel_id,
          H.premium_r, 
          H.contact_number, 
          H.address, 
-         H.image_url, 
+         H.image_url1, 
          H.homepage_url,
          f.user_id, 
          u.name;
@@ -125,7 +141,7 @@ SELECT
     H.contact_number, 
     H.address, 
     GROUP_CONCAT(A.amenity_name SEPARATOR ', ') AS amenities, 
-    H.image_url, 
+    H.image_url1, 
     H.homepage_url,
     f.user_id,              
     u.name AS user_name,       
@@ -148,7 +164,7 @@ GROUP BY H.hotel_id,
          H.premium_r, 
          H.contact_number, 
          H.address, 
-         H.image_url, 
+         H.image_url1, 
          H.homepage_url,
          f.user_id, 
          u.name,
@@ -193,7 +209,7 @@ SELECT
     sr.reservation_id,         -- 예약 ID
     u.name AS user_name,        -- 사용자 이름
     h.hotel_name,               -- 호텔 이름
-    h.image_url1,               -- 호텔 이미지 URL
+    h.image_urls,               -- 호텔 이미지 URL
     sr.guest_name,              -- 손님 이름
     sr.check_in,                -- 체크인 날짜
     sr.check_out,               -- 체크아웃 날짜
@@ -211,7 +227,7 @@ SELECT
     dr.reservation_id,
     u.name AS user_name,
     h.hotel_name,
-    h.image_url1,
+    h.image_urld,
     dr.guest_name,
     dr.check_in,
     dr.check_out,
@@ -229,7 +245,7 @@ SELECT
     pr.reservation_id,
     u.name AS user_name,
     h.hotel_name,
-    h.image_url1,
+    h.image_urlp,
     pr.guest_name,
     pr.check_in,
     pr.check_out,
