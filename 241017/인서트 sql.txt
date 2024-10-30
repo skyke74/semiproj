@@ -205,6 +205,23 @@ INSERT INTO TouristAttractions (attraction_name, loc_id, features, address, home
 ('한라산', 4, '천연기념물 제 420호', '제주시 특별자치도, 110로 2070-61', 'https://jeju.go.kr/hallasan/index.htm', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRKguR-6gbRYIVJ-6Ii1KMUz6TVgr8yolT7SaqTwIcZ_KQFWuYcHth6ziBaKty0v_8HHa1C5cNxW1bkJadrkUSq-Mai0sVkHEvo--j0Qw');
 
 
+--1. hotels에 먼저 삽입
+INSERT INTO hotels (hotel_name, loc_id, star_rating, standard_r, deluxe_r, premium_r, standard_price, deluxe_price, premium_price, contact_number, homepage_url, address,image_url1,image_url2,image_url3)
+VALUES 
+('', , , , , , ,, , '', '', '', '', '', '')
+
+-- 2. 특수 테이블에 데이터 삽입 (oceanview, pension,indoorpool,hanok) and 호텔 아이디 필수 등록
+INSERT INTO indoorpool (hotel_id, hotel_name, loc_id, star_rating, standard_r, deluxe_r, premium_r, standard_price, deluxe_price, premium_price, contact_number, homepage_url, address,image_url1,image_url2,image_url3)
+VALUES 
+(30,'파라다이스 호텔 부산', 2, 5, 2, 2, 2, 235000, 380000, 620000, '051-742-2121', 'https://www.busanparadisehotel.co.kr/front', '부산광역시 해운대구 해운대해변로 296', 'https://pix10.agoda.net/hotelImages/654/65460/65460_17021507500051032269.jpg?ca=6&ce=1&s=414x232&ar=16x9', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/92178375.jpg?k=0c89934e25c723f503d53a605f24410f250a5e9c12a3a40d91be5b4aaec8041d&o=&hp=1', 'https://www.busanparadisehotel.co.kr/upload/201904/1554963881483.jpg'),
+(31,'라비드 아틀란 호텔2',2 , 4, 2, 2, 2,61661 , 82000,160000 , '051-745-4200', 'https://www.lavideatlanhotel2.com/', '부산광역시 해운대구 구남로 37', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1d3wr_RosvavXOAYXo4NfN276EsbchbY8xg&s', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqhMkDn_8QdXMP_uvy9J3jC7aP39bn3jMvcA&s', 'https://www.lavideatlanhotel2.com/wp-content/uploads/sites/212/2021/12/Deluxe-Double2.jpg'),
+(32,'시그니엘 부산',2 ,5 ,2,2,2,362000 ,452000 ,682000 , '051-922-1000', 'https://www.lottehotel.com/busan-signiel/ko.html', '부산광역시 해운대구 달맞이길 30', 'https://www.lottehotel.com/content/dam/lotte-hotel/global/common/company/busan-signiel.jpg', 'https://www.hotelscombined.co.kr/himg/9f/8f/5a/revato-3335933-13097038-193669.jpg', 'https://www.lottehotel.com/content/dam/lotte-hotel/signiel/busan/rooms/grand/2738-02-2000-roo-LTSB.jpg.thumb.1440.1440.jpg');
+(33,'서귀포 돔그라미펜션',3 ,1 ,2 ,2, 2, 96000,116000, 120000, '064-787-9000', 'https://jejudomgrami.com/', '제주특별자치도 표선면 표선리', 'https://yaimg.yanolja.com/v5/2024/06/08/21/640/6664cc68404cd3.09603465.jpg', 'https://yaimg.yanolja.com/v5/2024/06/08/21/1280/6664cc3d7bddb9.42621800.jpg', 'https://d2mgzmtdeipcjp.cloudfront.net/files/waus/2024/01/28/1706425996023.jpg'),
+(34,'부산 리벤시아 풀빌라',2,1,2,2,2,225000,250000,320000,'051-374-9096','http://xn--hc0bp1r8ub4weusch4khpe2a2816a.com/intro/intro.php','부산광역시 수영구 광안동 197-19 7층', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4vfdVjTYkEIAdUESOKgc5mFnWxaNJGwt3jQ&s','https://yaimg.yanolja.com/v5/2022/05/21/11/640/6288c6e6bd9959.61058699.jpg','https://yaimg.yanolja.com/v5/2022/05/21/11/640/6288c7093a7dc8.31558518.jpg'),
+(35.'광주 스테이더아람 B',4,1,2,2,2,132000,330000,660000,'010-6626-0315','https://booking.naver.com/booking/3/bizes/996533','광주광역시 광산구 박뫼길 20','https://ldb-phinf.pstatic.net/20240618_119/1718685760942kdnEj_JPEG/%B5%B6%C3%A4%C6%E6%BC%C7_%BF%DC%BA%CE1.jpg?type=f750_420_60_sharpen','https://yaimg.yanolja.com/v5/2024/07/15/11/1280/66950e9baf5fe1.86125520.jpg','https://yaimg.yanolja.com/v5/2024/07/15/11/1280/66950ea5b71517.88407713.jpg');
+
+
+
 
 INSERT INTO users (email, password, name, birth_date, address)
 VALUES 

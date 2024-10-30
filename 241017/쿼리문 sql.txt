@@ -222,6 +222,8 @@ JOIN
 JOIN 
     Hotels h ON sr.hotel_id = h.hotel_id;
 
+
+
 -- Deluxe Room 조회
 SELECT 
     dr.reservation_id,
@@ -239,6 +241,7 @@ JOIN
     Users u ON dr.user_id = u.user_id
 JOIN 
     Hotels h ON dr.hotel_id = h.hotel_id;
+
 
 -- Premium Room 조회
 SELECT 

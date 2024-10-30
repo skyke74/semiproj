@@ -16,6 +16,14 @@ GRANT ALL PRIVILEGES ON *.* TO 'username'@'%';
 FLUSH PRIVILEGES;
 
 
+UPDATE Hotels
+SET image_urls = 'https://example.com/image1.jpg',  -- 스탠다드 미지
+    image_urld = 'https://example.com/image2.jpg',  -- 디럭스 방 이미지
+    image_urlp = 'https://example.com/image3.jpg'   -- 프리미엄 방 이미지
+WHERE hotel_id = 1;
+
+('', , , , , , , , , '', '', '', '', '', ''),
+('', , , , , , , , , '', '', '', '', '', '');
 
 
 
