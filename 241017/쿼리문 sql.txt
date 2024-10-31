@@ -261,6 +261,126 @@ JOIN
 JOIN 
     Hotels h ON pr.hotel_id = h.hotel_id;
 
+-- 전체 호텔 조회 쿼리문(한옥,실내수영장 등 추가하고 씀)
+SELECT 
+    H.hotel_id,
+    H.hotel_name,
+    L.loc_name AS location,      
+    H.star_rating,
+    H.standard_r AS standard_room_count,
+    H.deluxe_r AS deluxe_room_count,
+    H.premium_r AS premium_room_count,
+    H.standard_price,
+    H.deluxe_price,
+    H.premium_price,
+    H.contact_number,
+    H.homepage_url,
+    H.address,
+    H.image_url1,
+    H.image_url2,
+    H.image_url3,
+    H.image_urls,                
+    H.image_urld,                 
+    H.image_urlp                   
+FROM 
+    Hotels H
+JOIN 
+    Location L ON H.loc_id = L.loc_id; 
+
+-- 실내수영장 테이블 조회
+SELECT 
+    IP.hotel_id,
+    IP.hotel_name,
+    L.loc_name AS location,
+    IP.star_rating,
+    IP.standard_r AS standard_room_count,
+    IP.deluxe_r AS deluxe_room_count,
+    IP.premium_r AS premium_room_count,
+    IP.standard_price,
+    IP.deluxe_price,
+    IP.premium_price,
+    IP.contact_number,
+    IP.homepage_url,
+    IP.address,
+    IP.image_url1,
+    IP.image_url2,
+    IP.image_url3
+FROM 
+    IndoorPool IP
+JOIN 
+    Location L ON IP.loc_id = L.loc_id;
+
+-- 오션뷰 테이블 조회
+SELECT 
+    OV.hotel_id,
+    OV.hotel_name,
+    L.loc_name AS location,
+    OV.star_rating,
+    OV.standard_r AS standard_room_count,
+    OV.deluxe_r AS deluxe_room_count,
+    OV.premium_r AS premium_room_count,
+    OV.standard_price,
+    OV.deluxe_price,
+    OV.premium_price,
+    OV.contact_number,
+    OV.homepage_url,
+    OV.address,
+    OV.image_url1,
+    OV.image_url2,
+    OV.image_url3
+FROM 
+    OceanView OV
+JOIN 
+    Location L ON OV.loc_id = L.loc_id;
+
+
+--한옥테이블 조회
+SELECT 
+    HN.hotel_id,
+    HN.hotel_name,
+    L.loc_name AS location,
+    HN.star_rating,
+    HN.standard_r AS standard_room_count,
+    HN.deluxe_r AS deluxe_room_count,
+    HN.premium_r AS premium_room_count,
+    HN.standard_price,
+    HN.deluxe_price,
+    HN.premium_price,
+    HN.contact_number,
+    HN.homepage_url,
+    HN.address,
+    HN.image_url1,
+    HN.image_url2,
+    HN.image_url3
+FROM 
+    Hanok HN
+JOIN 
+    Location L ON HN.loc_id = L.loc_id;
+
+--펜션테이블 조회
+SELECT 
+    P.hotel_id,
+    P.hotel_name,
+    L.loc_name AS location,
+    P.star_rating,
+    P.standard_r AS standard_room_count,
+    P.deluxe_r AS deluxe_room_count,
+    P.premium_r AS premium_room_count,
+    P.standard_price,
+    P.deluxe_price,
+    P.premium_price,
+    P.contact_number,
+    P.homepage_url,
+    P.address,
+    P.image_url1,
+    P.image_url2,
+    P.image_url3
+FROM 
+    Pension P
+JOIN 
+    Location L ON P.loc_id = L.loc_id;
+
+
 
 
 
