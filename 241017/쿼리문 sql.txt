@@ -31,7 +31,7 @@ GROUP BY H.hotel_id,
          H.contact_number
 
 
---최종통합 Hotels 테이블 정보 쿼리문 
+-- ★ 기존 hotels 테이블에 있던 호텔들(1~29) 최종통합 Hotels 테이블 정보 쿼리문 
 
 SELECT 
     H.hotel_id, 
@@ -261,7 +261,7 @@ JOIN
 JOIN 
     Hotels h ON pr.hotel_id = h.hotel_id;
 
--- 전체 호텔 조회 쿼리문(한옥,실내수영장 등 추가하고 씀)
+--★  전체 호텔 조회 쿼리문(테마별 추천 숙소 추가 ver.)
 SELECT 
     H.hotel_id,
     H.hotel_name,
