@@ -24,8 +24,7 @@ CREATE TABLE hotels (
   image_urlp varchar(255) DEFAULT NULL,
   PRIMARY KEY (`hotel_id`),
   CONSTRAINT `hotels_chk_1` CHECK ((`star_rating` between 1 and 5))
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
+);
 -- 혹시나 위에 호텔 테이블 안되면 백업용
 CREATE TABLE Hotels (
     hotel_id INT PRIMARY KEY AUTO_INCREMENT, -- 호텔 id
