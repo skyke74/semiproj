@@ -1,0 +1,11 @@
+CREATE TABLE favorites (
+    favorite_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,                     
+    hotel_id INT NOT NULL,                     
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, --즐겨찾기 등록 날짜
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE, --외래키 설정
+    FOREIGN KEY (hotel_id) REFERENCES hotels(hotel_id) ON DELETE CASCADE
+);
+
+INSERT INTO favorites (user_id, hotel_id)
+VALUES ( 1 , 1 ); 

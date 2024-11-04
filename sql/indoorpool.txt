@@ -1,0 +1,31 @@
+CREATE TABLE IndoorPool (
+   hotel_id int NOT NULL AUTO_INCREMENT,
+    hotel_name VARCHAR(100) NOT NULL, -- 호텔 이름
+    loc_id INT NOT NULL, -- 지역 ID
+    star_rating INT DEFAULT NULL, -- 성급
+    standard_r INT NOT NULL, -- 스탠다드 방 개수
+    deluxe_r INT NOT NULL, -- 디럭스 방 개수
+    premium_r INT NOT NULL, -- 프리미엄 방 개수
+    standard_price INT NOT NULL, -- 스탠다드 방 가격
+    deluxe_price INT NOT NULL, -- 디럭스 방 가격
+    premium_price INT NOT NULL, -- 프리미엄 방 가격
+    contact_number VARCHAR(15) DEFAULT NULL, -- 연락처
+    homepage_url VARCHAR(255) DEFAULT NULL, -- 홈페이지 URL
+    address VARCHAR(255) DEFAULT NULL, -- 주소
+   amenity_id int DEFAULT NULL,
+    image_url1 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 1
+    image_url2 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 2
+    image_url3 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 3
+    image_urls VARCHAR(255) DEFAULT NULL, -- 이미지 URL (여러 개)
+    image_urld VARCHAR(255) DEFAULT NULL, -- 이미지 URL (디럭스)
+    image_urlp VARCHAR(255) DEFAULT NULL, -- 이미지 URL (프리미엄)
+    PRIMARY KEY (hotel_id), -- 기본 키 설정
+    FOREIGN KEY (hotel_id) REFERENCES Hotels(hotel_id) -- 외래 키 설정
+);
+
+INSERT INTO indoorpool (hotel_name,loc_id,star_rating,standard_r,deluxe_r,premium_r,standard_price,deluxe_price,premium_price,contact_number,homepage_url,address,amenity_id,image_url1,image_url2,image_url3,image_urls,image_urld,image_urlp) VALUES
+	 ('부산 롯데호텔',2,5,2,2,2,312000,459800,780000,' 051-810-1000','https://www.lottehotel.com/busan-hotel/ko.html','부산광역시 부산진구 가야대로 772',NULL,'https://www.lottehotel.com/content/dam/lotte-hotel/lotte/busan/accommodation/club-floor/club-deluxe-room/180829-24-2000-acc-busan-hotel.jpg.thumb.1440.1440.jpg','https://cf.bstatic.com/xdata/images/hotel/max1024x768/416034300.jpg?k=99fb58a2483cb9bba0aee57607c96b199fe68755c22dffe3f6f6df57721d5413&o=&hp=1','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/busan/main/6470-1-2000-mai-LTBU.jpg.thumb.768.768.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg'),
+	 ('서울 신라호텔',1,5,2,2,2,416000,566000,890000,'02-2233-3131','https://www.shilla.net/seoul/index.do','서울특별시 중구 동호로 249',NULL,'https://cf.bstatic.com/xdata/images/hotel/max1024x768/251019186.jpg?k=e01d8769db95d541a30887015cb2a0888d53eaa73d5d2641ce1a31ce55c82c75&o=&hp=1','https://www.hotelscombined.co.kr/rimg/himg/d4/f9/fe/revato-6948-13268236-403435.jpg?width=1366&height=768&crop=true','https://cf.bstatic.com/xdata/images/hotel/max1024x768/251019379.jpg?k=71b2ce5a672fcd86b7563584f3642eba49e35ce998352c6a25519c35ba3b05da&o=&hp=1','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg'),
+	 ('다인 오세아노호텔',3,4,2,2,2,142000,250000,420000,'064-799-2600','https://www.dyneresort.co.kr/','제주특별자치도 제주시 특별자치도, 애월읍 애월해안로 394',NULL,'https://cf.bstatic.com/xdata/images/hotel/max1024x768/473082677.jpg?k=82a96cded3b03f7108453fc713e3df4f69f744f7ed0485897b017054999334fc&o=&hp=1','https://cf.bstatic.com/xdata/images/hotel/max1024x768/473083698.jpg?k=382de104a48e64827afde25e9c3a1bd09b413f4da935b9d4dc03a881b3bd8e32&o=&hp=1','https://image.goodchoice.kr/affiliate/2023/12/01/65699a477a1c8.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg');
+
+

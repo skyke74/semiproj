@@ -1,0 +1,30 @@
+CREATE TABLE Hanok (
+    hotel_id int NOT NULL AUTO_INCREMENT,
+    hotel_name VARCHAR(100) NOT NULL, -- 호텔 이름
+    loc_id INT NOT NULL, -- 지역 ID
+    star_rating INT DEFAULT NULL, -- 성급
+    standard_r INT NOT NULL, -- 스탠다드 방 개수
+    deluxe_r INT NOT NULL, -- 디럭스 방 개수
+    premium_r INT NOT NULL, -- 프리미엄 방 개수
+    standard_price INT NOT NULL, -- 스탠다드 방 가격
+    deluxe_price INT NOT NULL, -- 디럭스 방 가격
+    premium_price INT NOT NULL, -- 프리미엄 방 가격
+    contact_number VARCHAR(15) DEFAULT NULL, -- 연락처
+    homepage_url VARCHAR(255) DEFAULT NULL, -- 홈페이지 URL
+    address VARCHAR(255) DEFAULT NULL, -- 주소
+   amenity_id int DEFAULT NULL,
+    image_url1 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 1
+    image_url2 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 2
+    image_url3 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 3
+    image_urls VARCHAR(255) DEFAULT NULL, -- 이미지 URL (여러 개)
+    image_urld VARCHAR(255) DEFAULT NULL, -- 이미지 URL (디럭스)
+    image_urlp VARCHAR(255) DEFAULT NULL, -- 이미지 URL (프리미엄)
+    PRIMARY KEY (hotel_id), -- 기본 키 설정
+    FOREIGN KEY (hotel_id) REFERENCES Hotels(hotel_id) -- 외래 키 설정
+);
+
+
+INSERT INTO hanok (hotel_name,loc_id,star_rating,standard_r,deluxe_r,premium_r,standard_price,deluxe_price,premium_price,contact_number,homepage_url,address,amenity_id,image_url1,image_url2,image_url3,image_urls,image_urld,image_urlp) VALUES
+	 ('한옥호텔 락고제',1,1,2,2,2,360000,490000,680000,'02-742-3410','http://rkj.co.kr/','서울특별시 종로구 가회동 218',NULL,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHT88KfI7To_VvPktGUINd9ZzgM1AnzTbnLw&s','https://lh3.googleusercontent.com/proxy/PKbIeH1q8g0LGb2sa_F-sryayGjTk8k2OIg1zZRLA6W8dzcUCFqNG2fcL4pLLewpZ6BGWymqFjtbH2ETA1LnNkONZEjIcyUBQFt_jmNbeHa2_HF1GufflgekB4FaqCfR-qTDyZVs-mA','https://lh4.googleusercontent.com/proxy/OEqU6AVoDONxBxqw-pG1tEy67gQGqBcOPHNZLWs269jW4n6iVaQzloBh8GVRvNhizx5e4L4Wa2oNPyRbw-enxcsq2nbboxjMsZItvz_zFOLxBaO8SqUo6Q','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg'),
+	 ('한라궁 호텔',3,1,2,2,2,92000,135000,203100,'064-732-7900','http://hallagung.com/index.php','제주특별자치도 서귀포시 특별자치도, 토평동 정방연로',NULL,'https://i.ytimg.com/vi/fY6capIJnyA/maxresdefault.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHs0zn59Z1XBs3697pRVKwBHAQNcDO8ATnMg&s','https://lh6.googleusercontent.com/proxy/iPaknY22p4eyn2Inu7m4t51_gL2avnKn8SkrnN_F_01ltYkbwi__PqcrUZHTkNoWrqdGx0TMax9xQVCC3or6owq6MR4','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg'),
+	 ('광주 다솜채 한옥스테이',4,1,2,2,2,46000,72000,120000,' 070-8831-7700','http://www.dasomchae.net/','광주광역시 광산구 송정동 내상로51번길 27',NULL,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW6HaEQZ1yoez7uEiEexsDgOZy88vPpSJOwA&s','https://yaimg.yanolja.com/v5/2019/04/12/14/640/5cb021cfe46122.59633763.jpg','https://i.ytimg.com/vi/t8ae0ye4BYY/maxresdefault.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg');

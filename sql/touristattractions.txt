@@ -1,0 +1,18 @@
+CREATE TABLE TouristAttractions (
+    attraction_name VARCHAR(255),
+    loc_id INT,
+    features VARCHAR(255),
+    address VARCHAR(255),
+    homepage VARCHAR(255),
+    image_url VARCHAR(255)
+);
+
+INSERT INTO TouristAttractions (attraction_name, loc_id, features, address, homepage, image_url) VALUES 
+('서울타워', 1, '서울 시내를 한눈에 조망할 수 있는 360도 전망대', '서울 용산구 남산공원길 105', 'https://www.nseoultower.co.kr/', 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQfUsL2cXF2zuGubpxNVzVuuQt_HxEq689Pbzn0OcJ9JjsI6lViDJMozRrSFAFbIrvPUdFDwn8Z0r651vw80u6zocJppgp2_SDukBBCnQ'),
+('롯데월드', 1, '실내-롯데월드 어드벤처, 야외-매직 아일랜드', '서울특별시 송파구 올림픽로', 'https://adventure.lotteworld.com/kor/main/index.do', 'https://www.vviptravel.com/wp-content/uploads/2019/05/lotte-world-theme-park-castle.jpg'),
+('광안대교', 2, '해상 위를 가로지르는 부산의 대표적 다리', '부산광역시 수영구 광안2동', 'https://www.bisco.or.kr/gwanganbridge/sub/sub03/sub03_3/?tabName=con01', 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTlBtVAq-DSJKoiDkyNhWsDJfykNVOqRwdC9cpEj3nyIaUjpzW_iHtQ3aD2X_Z7XI9RXESI2Od220NbTQUS7iUvuN6YxE0KILAFGClWSQ'),
+('해운대', 2, '부산광역시 대표 해수욕장', '부산광역시 해운대구', 'https://www.busan.go.kr/depart/ahhaewonndae', 'https://i.namu.wiki/i/hkDOgJHC40yiIFKQDRz7YjHpzWrL9vCTT7mve4TF6Lj-GpGsBpvT8WlXbwOT_To1Ndl1zKrVLQ-SiwaGNFOgQA.webp'),
+('광주호 호수생태원', 3, '광주광역시의 자연 생태공원', '광주광역시 북구 충효샘길 7', 'https://www.kctg.or.kr/tour/touristSiteView.do?tourist_cd=TOURIST_ID00010276', 'https://i.namu.wiki/i/GtpUOV7s88fsieoT3w9icI--nwqndbBQMb__iHraAnCbaIzvMdZ83MGMg8z3wdAQUF-tc_AM1bsv4r1mX-2LTw.webp'),
+('무등산', 3, '대한민국의 21번째 국립공원', '광주광역시 북구 무등로 1550', 'https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=122000&menuNo=7020090', 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQRCJGuEIpxWdJj116EncDU95n0tFDc4sEf3jDCRfrmczBu4T1CnpGAo_Qi5tPXmu__2nH3IEX13-7l51dB9W6UNghKCAcoNMlvJWsPog'),
+('성산 일출봉', 4, '그릇 모양의 분화구가 있는 화산 봉우리', '성산읍 성산리 78', 'https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500349', 'https://lh4.googleusercontent.com/proxy/NkthcsVN9OzJ4_MqIyoVrLcVc-WOTH2MxeyGRZ6dhbcybx-9MPrjvnel4bPZxC8ZOVgMVoHvpBA6605YInBridTrvEDoLWgUW0DaTg5M1YM'),
+('한라산', 4, '천연기념물 제 420호', '제주시 특별자치도, 110로 2070-61', 'https://jeju.go.kr/hallasan/index.htm', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRKguR-6gbRYIVJ-6Ii1KMUz6TVgr8yolT7SaqTwIcZ_KQFWuYcHth6ziBaKty0v_8HHa1C5cNxW1bkJadrkUSq-Mai0sVkHEvo--j0Qw');

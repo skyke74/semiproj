@@ -1,0 +1,11 @@
+CREATE TABLE Location(
+	loc_id  INT PRIMARY KEY AUTO_INCREMENT,
+	loc_name VARCHAR(10) NOT NULL
+);
+
+INSERT INTO Location(loc_name) VALUES
+-- 1~4
+('서울'),
+('부산'),
+('제주'),
+('광주');

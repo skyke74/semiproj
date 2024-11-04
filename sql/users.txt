@@ -1,0 +1,14 @@
+CREATE TABLE Users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    address VARCHAR(255),
+    birth_date DATE
+);
+
+INSERT INTO users (email, password, name, birth_date, address)
+VALUES 
+('test1@example.com', '1234', '김박두레', '1990-01-15', '부산시 연제구 연산동'), -- 예시 1,2,3
+('test2@example.com', '5456', '김덕배', '1985-03-22', '부산시 해운대구 우3동'),
+('test3@example.com', '1789', '박사랑', '1992-07-11', '부산시 동래구 안락동');

@@ -1,0 +1,31 @@
+CREATE TABLE Pension (
+    hotel_id int NOT NULL AUTO_INCREMENT,
+    hotel_name VARCHAR(100) NOT NULL, -- 호텔 이름
+    loc_id INT NOT NULL, -- 지역 ID
+    star_rating INT DEFAULT NULL, -- 성급
+    standard_r INT NOT NULL, -- 스탠다드 방 개수
+    deluxe_r INT NOT NULL, -- 디럭스 방 개수
+    premium_r INT NOT NULL, -- 프리미엄 방 개수
+    standard_price INT NOT NULL, -- 스탠다드 방 가격
+    deluxe_price INT NOT NULL, -- 디럭스 방 가격
+    premium_price INT NOT NULL, -- 프리미엄 방 가격
+    contact_number VARCHAR(15) DEFAULT NULL, -- 연락처
+    homepage_url VARCHAR(255) DEFAULT NULL, -- 홈페이지 URL
+    address VARCHAR(255) DEFAULT NULL, -- 주소
+   amenity_id int DEFAULT NULL,
+    image_url1 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 1
+    image_url2 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 2
+    image_url3 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 3
+    image_urls VARCHAR(255) DEFAULT NULL, -- 이미지 URL (여러 개)
+    image_urld VARCHAR(255) DEFAULT NULL, -- 이미지 URL (디럭스)
+    image_urlp VARCHAR(255) DEFAULT NULL, -- 이미지 URL (프리미엄)
+    PRIMARY KEY (hotel_id), -- 기본 키 설정
+    FOREIGN KEY (hotel_id) REFERENCES Hotels(hotel_id) -- 외래 키 설정
+);
+
+
+INSERT INTO pension (hotel_name,loc_id,star_rating,standard_r,deluxe_r,premium_r,standard_price,deluxe_price,premium_price,contact_number,homepage_url,address,amenity_id,image_url1,image_url2,image_url3,image_urls,image_urld,image_urlp) VALUES
+	 ('서귀포 돔그라미펜션',3,1,2,2,2,96000,116000,120000,'064-787-9000','https://jejudomgrami.com/','제주특별자치도 표선면 표선리',NULL,'https://yaimg.yanolja.com/v5/2024/06/08/21/640/6664cc68404cd3.09603465.jpg','https://yaimg.yanolja.com/v5/2024/06/08/21/1280/6664cc3d7bddb9.42621800.jpg','https://d2mgzmtdeipcjp.cloudfront.net/files/waus/2024/01/28/1706425996023.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg'),
+	 ('부산 리벤시아 풀빌라',2,1,2,2,2,225000,250000,320000,'051-374-9096','http://xn--hc0bp1r8ub4weusch4khpe2a2816a.com/intro/intro.php','부산광역시 수영구 광안동 197-19 7층',NULL,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4vfdVjTYkEIAdUESOKgc5mFnWxaNJGwt3jQ&s','https://yaimg.yanolja.com/v5/2022/05/21/11/640/6288c6e6bd9959.61058699.jpg','https://yaimg.yanolja.com/v5/2022/05/21/11/640/6288c7093a7dc8.31558518.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg'),
+	 ('광주 스테이더아람 B',4,1,2,2,2,132000,330000,660000,'010-6626-0315','https://booking.naver.com/booking/3/bizes/996533','광주광역시 광산구 박뫼길 20',NULL,'https://ldb-phinf.pstatic.net/20240618_119/1718685760942kdnEj_JPEG/%B5%B6%C3%A4%C6%E6%BC%C7_%BF%DC%BA%CE1.jpg?type=f750_420_60_sharpen','https://yaimg.yanolja.com/v5/2024/07/15/11/1280/66950e9baf5fe1.86125520.jpg','https://yaimg.yanolja.com/v5/2024/07/15/11/1280/66950ea5b71517.88407713.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg');
+

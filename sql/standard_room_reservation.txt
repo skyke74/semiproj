@@ -1,0 +1,23 @@
+CREATE TABLE standard_room_reservation (
+    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL, -- Users 테이블에서 가져온 유저 ID
+    hotel_id INT NOT NULL, -- Hotels 테이블에서 가져온 호텔 ID
+    guest_name VARCHAR(100) NOT NULL, -- 손님 이름
+    check_in DATE NOT NULL, -- 체크인 날짜
+    check_out DATE NOT NULL, -- 체크아웃 날짜
+    room_info VARCHAR(100) NOT NULL, -- 객실 정보
+    price INT NOT NULL, -- 객실 가격 (standard_price에서 가져옴)
+    FOREIGN KEY (user_id) REFERENCES Users(user_id), -- Users 테이블과 외래키 연관
+    FOREIGN KEY (hotel_id) REFERENCES Hotels(hotel_id) -- Hotels 테이블과 외래키 연관
+);
+
+INSERT INTO standard_room_reservation (user_id, hotel_id, guest_name, check_in, check_out, room_info, price)
+VALUES (
+    ?,                                        -- Users 테이블의 user_id
+    ?,                                       -- Hotels 테이블의 hotel_id
+    '',                               -- 손님 이름
+    '',                             -- 체크인 날짜
+    '',                             -- 체크아웃 날짜
+    '스탠다드 룸',                            -- 객실 정보
+    (SELECT standard_price FROM Hotels WHERE hotel_id = ?)  -- Hotels에서 스탠다드 가격 가져오기
+);

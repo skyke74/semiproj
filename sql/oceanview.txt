@@ -1,0 +1,31 @@
+CREATE TABLE OceanView (
+    hotel_id int NOT NULL AUTO_INCREMENT,
+    hotel_name VARCHAR(100) NOT NULL, -- 호텔 이름
+    loc_id INT NOT NULL, -- 지역 ID
+    star_rating INT DEFAULT NULL, -- 성급
+    standard_r INT NOT NULL, -- 스탠다드 방 개수
+    deluxe_r INT NOT NULL, -- 디럭스 방 개수
+    premium_r INT NOT NULL, -- 프리미엄 방 개수
+    standard_price INT NOT NULL, -- 스탠다드 방 가격
+    deluxe_price INT NOT NULL, -- 디럭스 방 가격
+    premium_price INT NOT NULL, -- 프리미엄 방 가격
+    contact_number VARCHAR(15) DEFAULT NULL, -- 연락처
+    homepage_url VARCHAR(255) DEFAULT NULL, -- 홈페이지 URL
+    address VARCHAR(255) DEFAULT NULL, -- 주소
+	amenity_id int DEFAULT NULL,
+    image_url1 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 1
+    image_url2 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 2
+    image_url3 VARCHAR(255) DEFAULT NULL, -- 이미지 URL 3
+    image_urls VARCHAR(255) DEFAULT NULL, -- 이미지 URL (여러 개)
+    image_urld VARCHAR(255) DEFAULT NULL, -- 이미지 URL (디럭스)
+    image_urlp VARCHAR(255) DEFAULT NULL, -- 이미지 URL (프리미엄)
+    PRIMARY KEY (hotel_id), -- 기본 키 설정
+    FOREIGN KEY (hotel_id) REFERENCES Hotels(hotel_id) -- 외래 키 설정
+);
+
+INSERT INTO oceanview (hotel_name,loc_id,star_rating,standard_r,deluxe_r,premium_r,standard_price,deluxe_price,premium_price,contact_number,homepage_url,address,amenity_id,image_url1,image_url2,image_url3,image_urls,image_urld,image_urlp) VALUES
+	 ('파라다이스 호텔 부산',2,5,2,2,2,235000,380000,620000,'051-742-2121','https://www.busanparadisehotel.co.kr/front','부산광역시 해운대구 해운대해변로 296',NULL,'https://pix10.agoda.net/hotelImages/654/65460/65460_17021507500051032269.jpg?ca=6&ce=1&s=414x232&ar=16x9','https://cf.bstatic.com/xdata/images/hotel/max1024x768/92178375.jpg?k=0c89934e25c723f503d53a605f24410f250a5e9c12a3a40d91be5b4aaec8041d&o=&hp=1','https://www.busanparadisehotel.co.kr/upload/201904/1554963881483.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg'),
+	 ('라비드 아틀란 호텔2',2,4,2,2,2,61661,82000,160000,'051-745-4200','https://www.lavideatlanhotel2.com/','부산광역시 해운대구 구남로 37',NULL,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1d3wr_RosvavXOAYXo4NfN276EsbchbY8xg&s','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqhMkDn_8QdXMP_uvy9J3jC7aP39bn3jMvcA&s','https://www.lavideatlanhotel2.com/wp-content/uploads/sites/212/2021/12/Deluxe-Double2.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg'),
+	 ('시그니엘 부산',2,5,2,2,2,362000,452000,682000,'051-922-1000','https://www.lottehotel.com/busan-signiel/ko.html','부산광역시 해운대구 달맞이길 30',NULL,'https://www.lottehotel.com/content/dam/lotte-hotel/global/common/company/busan-signiel.jpg','https://www.hotelscombined.co.kr/himg/9f/8f/5a/revato-3335933-13097038-193669.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/signiel/busan/rooms/grand/2738-02-2000-roo-LTSB.jpg.thumb.1440.1440.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/city/myeongdong/accommodation/standard/180708-1-2000-acc-myeongdong-city.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/main-tower/standard/deluxe/181107-9-2000-roo-LTSE.jpg.thumb.1920.1920.jpg','https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/accommodation/executive-tower/standard/premier-room/181026-12-2000-roo-LTSE.jpg.thumb.768.768.jpg');
+
+

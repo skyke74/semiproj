@@ -1,0 +1,15 @@
+CREATE TABLE Amenities (
+    amenity_id INT PRIMARY KEY AUTO_INCREMENT,
+    amenity_name VARCHAR(100) NOT NULL
+);
+
+INSERT INTO Amenities (amenity_name) VALUES
+('무료 Wi-Fi'), 
+('주차장'), 
+('에어컨'), 
+('수영장'), 
+('레스토랑'), 
+('호텔 바'), 
+('조식'), 
+('스파'),
+('피트니스 센터');
