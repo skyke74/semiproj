@@ -6,6 +6,3 @@ CREATE TABLE favorites (
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE, --외래키 설정
     FOREIGN KEY (hotel_id) REFERENCES hotels(hotel_id) ON DELETE CASCADE
 );
-
-INSERT INTO favorites (user_id, hotel_id)
-VALUES ( 1 , 1 ); 

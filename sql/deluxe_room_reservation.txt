@@ -10,13 +10,3 @@ CREATE TABLE deluxe_room_reservation (
     FOREIGN KEY (user_id) REFERENCES Users(user_id),
     FOREIGN KEY (hotel_id) REFERENCES Hotels(hotel_id)
 );
-
-INSERT INTO deluxe_room_reservation (user_id, hotel_id, guest_name, check_in, check_out, room_info, price)
-VALUES (
-    ?,                                        -- Users 테이블의 user_id
-    ?,                                       -- Hotels 테이블의 hotel_id
-    '',                               -- 손님 이름
-    '',                             -- 체크인 날짜
-    '',                             -- 체크아웃 날짜
-    '',                              -- 객실 정보
-    (SELECT deluxe_price FROM Hotels WHERE hotel_id =  );
